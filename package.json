@@ -1,5 +1,5 @@
 {
-  "homepage": "https://sivamegha.github.io/FKodesolution",
+  "homepage": "https://FKodeSolution.github.io/FKode-Solution",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -52,4 +52,5 @@
   "devDependencies": {
     "gh-pages": "^6.3.0"
   }
+
 }
