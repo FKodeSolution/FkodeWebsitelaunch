@@ -54,37 +54,39 @@ export default function Navbar() {
       ? "text-slate-950"
       : "text-white"
   }`}
->
- <div className="font-automata flex items-center text-1xl uppercase tracking-widest">
-  {/* F - Blue */}
-  <span className="text-blue-600 font-bold">F</span>
-  
-  {/* K - Orange */}
-  <span className="text-orange-500 font-bold">K</span>
-  
-  {/* ode Solution - Silver/Grey */}
-  <span className="text-slate-700 ">
-    ode Solution
-  </span>
-</div></span>
+></span>
+<div className="flex items-center justify-center md:justify-start w-full">
 
+  <div className="
+      font-automata
+      flex items-center
+      whitespace-nowrap
+      text-sm sm:text-lg md:text-2xl
+      uppercase tracking-wide">
+
+    {/* F */}
+    <span className="text-blue-600 font-bold">F</span>
+
+    {/* K */}
+    <span className="text-orange-500 font-bold">K</span>
+
+    {/* ode Solution */}
+    <span className="text-slate-700 font-medium">
+      ode Solution
+    </span>
+
+  </div>
+
+</div>
+   
         </NavLink>
 
        {/* DESKTOP MENU */}
 <div className="hidden md:flex items-center gap-8">
   
   {/* HOME */}
-  <NavLink 
-    to="/" 
-    className={({ isActive }) => 
-        isActive 
-          ? "text-blue-600 font-black scale-110" 
-          : `font-bold ${isScrolled || isMegaMenuOpen ? "text-slate-900" : "text-white"}`
-      
-    }
-  >
-    Home
-  </NavLink>
+  
+  <NavLink to="/" className={({ isActive }) => isActive ? "text-blue-600 font-black scale-110 text-[11px] uppercase tracking-widest" : `text-[11px] uppercase tracking-widest font-bold ${isScrolled || isMegaMenuOpen ? "text-slate-900" : "text-white"}`}>Home</NavLink>
 
  {/* SERVICES - High-End Mega Menu Logic */}
 <div
@@ -166,17 +168,8 @@ export default function Navbar() {
   </AnimatePresence>
 </div>
 
-  {/* WHY FKODE */}
-  <NavLink 
-    to="/why-fkode" 
-    className={({ isActive }) => 
-        isActive 
-          ? "text-blue-600 font-black scale-110" 
-          : `font-bold ${isScrolled || isMegaMenuOpen ? "text-slate-900" : "text-white"}`
-    }
-  >
-    Why FKode
-  </NavLink>
+  
+  <NavLink to="/why-fkode" className={({ isActive }) => isActive ? "text-blue-600 font-black scale-110 text-[11px] uppercase tracking-widest" : `text-[11px] uppercase tracking-widest font-bold ${isScrolled || isMegaMenuOpen ? "text-slate-900" : "text-white"}`}>Why FKode</NavLink>
 
   <NavLink to="/industries" className={({ isActive }) => isActive ? "text-blue-600 font-black scale-110 text-[11px] uppercase tracking-widest" : `text-[11px] uppercase tracking-widest font-bold ${isScrolled || isMegaMenuOpen ? "text-slate-900" : "text-white"}`}>Industries</NavLink>
   <NavLink to="/founder" className={({ isActive }) => isActive ? "text-blue-600 font-black scale-110 text-[11px] uppercase tracking-widest" : `text-[11px] uppercase tracking-widest font-bold ${isScrolled || isMegaMenuOpen ? "text-slate-900" : "text-white"}`}>Founder</NavLink>
@@ -298,6 +291,26 @@ export default function Navbar() {
           className="text-left text-4xl font-black text-slate-900 uppercase"
         >
           Founder
+        </button>
+
+        <button 
+          onClick={() => {
+            navigate("/testimonials");
+            setIsMobileMenuOpen(false);
+          }} 
+          className="text-left text-4xl font-black text-slate-900 uppercase"
+        >
+          Review
+        </button>
+
+<button 
+          onClick={() => {
+            navigate("/career");
+            setIsMobileMenuOpen(false);
+          }} 
+          className="text-left text-4xl font-black text-slate-900 uppercase"
+        >
+          career
         </button>
 
         {/* CTA Button */}

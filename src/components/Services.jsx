@@ -119,10 +119,32 @@ export default function Services() {
                 <span className="font-mono-tech text-[10px] text-slate-400 uppercase tracking-[0.5em]">System Core / Portfolio v2</span>
               </div>
               
-              <h2 className="font-swiss text-6xl md:text-[6.8rem] font-black text-slate-950 tracking-[-0.08em] leading-[0.82] uppercase overflow-hidden">
-                <motion.span initial={{ y: "100%" }} whileInView={{ y: 0 }} transition={{ duration: 0.8, ease: "circOut" }} className="block">Innovation </motion.span>
-                <motion.span initial={{ y: "100%" }} whileInView={{ y: 0 }} transition={{ duration: 0.8, delay: 0.2, ease: "circOut" }} className="text-blue-900 "> Services.</motion.span>
-              </h2>
+             <h2 className="font-swiss 
+               text-3xl sm:text-4xl md:text-6xl lg:text-[6.8rem] 
+               font-black text-slate-950 
+               tracking-[-0.05em] md:tracking-[-0.08em] 
+               leading-tight md:leading-[0.82] 
+               uppercase overflow-hidden">
+
+  <motion.span
+    initial={{ y: "100%" }}
+    whileInView={{ y: 0 }}
+    transition={{ duration: 0.8, ease: "circOut" }}
+    className="block"
+  >
+    Innovation
+  </motion.span>
+
+  <motion.span
+    initial={{ y: "100%" }}
+    whileInView={{ y: 0 }}
+    transition={{ duration: 0.8, delay: 0.2, ease: "circOut" }}
+    className="block text-blue-900"
+  >
+    Services.
+  </motion.span>
+
+</h2>
             </div>
           </ScrollReveal>
 

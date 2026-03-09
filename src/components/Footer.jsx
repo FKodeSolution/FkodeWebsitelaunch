@@ -43,7 +43,9 @@ export default function Footer() {
     window.open("https://wa.me/918248798337", "_blank");
 
   return (
+    
     <footer className="relative bg-black text-white overflow-hidden pt-20 pb-8">
+      
       {/* Background bubbles */}
       <div
         ref={(el) => (bubbleRefs.current[0] = el)}
@@ -53,6 +55,7 @@ export default function Footer() {
         ref={(el) => (bubbleRefs.current[1] = el)}
         className="absolute -bottom-40 -right-40 w-[700px] h-[700px] bg-orange-500/20 rounded-full blur-[140px]"
       />
+       
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-10 grid md:grid-cols-4 gap-10">
         {/* Brand */}
@@ -60,14 +63,14 @@ export default function Footer() {
           <Link to="/" className="inline-block">
             <div
               ref={logoRef}
-              className="text-2xl font-extrabold mb-4 flex flex-wrap gap-1"
+              className="text-2xl font-extrabold font-automata mb-4 flex flex-wrap gap-1"
             >
               {"FKode Solution".split("").map((c, i) => (
                 <span
                   key={i}
                   className={
                     c !== " "
-                      ? "text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-orange-400"
+                      ? "text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-600"
                       : ""
                   }
                 >
@@ -95,6 +98,8 @@ export default function Footer() {
             <li><Link to="/industries" className="hover:text-blue-500">Industries</Link></li>
             <li><Link to="/founder" className="hover:text-blue-500">Founder</Link></li>
             <li><Link to="/testimonials" className="hover:text-blue-500">Reviews</Link></li>
+                        <li><Link to="/career" className="hover:text-blue-500">Career</Link></li>
+
             <li><Link to="/contact" className="hover:text-blue-500">Contact</Link></li>
 
                </ul>

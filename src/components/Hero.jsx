@@ -91,6 +91,9 @@ export default function FKodeCorporateHero() {
     Technology Partner
   </span>
 </h2>
+
+
+
       </div>
       <div className="md:text-right">
         <p className="text-slate-400 font-bold uppercase tracking-widest text-[11px] leading-relaxed">
