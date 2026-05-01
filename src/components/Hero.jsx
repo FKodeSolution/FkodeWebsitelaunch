@@ -44,15 +44,24 @@ export default function FKodeCorporateHero() {
           <div className="space-y-6 hero-anim">
             
 
-            <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
-              Transform Your Business From Idea to Success
-            </h1>
+<div className="mb-12">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-slate-900 leading-[1.1] mb-6">
+            Build Your Business. <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">
+              Scale Without Stress.
+            </span>
+          </h1>
+          
+          <h2 className="text-2xl md:text-3xl font-medium text-slate-500 leading-snug max-w-3xl mb-8">
+            From idea to execution to growth — everything handled under one roof.
+          </h2>
 
-            <p className="text-lg text-slate-600 max-w-xl">
-              Chennai based Complete Business Solution Provider delivering
-              branding, software engineering, automation, marketing and
-              scalable digital infrastructure for global businesses.
-            </p>
+          <p className="text-lg md:text-xl text-slate-600 max-w-2xl leading-relaxed">
+            A Chennai-based complete business solution provider delivering branding, 
+            software engineering, automation, marketing, and scalable digital 
+            infrastructure for global businesses.
+          </p>
+        </div>
 
             <div className="flex gap-6">
               <Link to="/contact">
@@ -133,10 +142,9 @@ export default function FKodeCorporateHero() {
       {/* RIGHT SIDE - CONTENT LIST (NO BOXES) */}
       <div className="lg:col-span-7 pt-4">
         <p className="text-2xl text-slate-800 leading-snug mb-16 font-medium">
-          Branding, legal setup, enterprise software development,
-          cloud automation, performance marketing and global scaling —
-          executed through one unified technology driven workflow.
-        </p>
+         FKode is a complete business solution provider helping startups, entrepreneurs, and companies launch, grow, and scale with ease.
+From branding and registration to software development and marketing, we provide everything required to build a successful business — all in one place.
+    </p>
 
         {/* CLEAN LIST ALIGNMENT */}
         <div className="space-y-12">

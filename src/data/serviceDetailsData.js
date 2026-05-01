@@ -1,6 +1,147 @@
 const serviceDetailsData = {
 
   /* =====================================================
+      BUSINESS WEBSITES & ENTERPRISE APPLICATIONS
+  ===================================================== */
+  "business-systems": {
+    metaTitle: "Enterprise Software & Business Systems | FKode Solution",
+    metaDescription: "Scalable digital infrastructure, ERP, and custom business applications engineered for high performance.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800",
+
+    h1: "Business Websites & Enterprise Applications",
+    intro: "We architect high-performance digital infrastructure designed for scale. Our solutions bridge the gap between complex business logic and intuitive user experiences for global enterprises.",
+
+    sections: [
+      {
+        title: "Core Infrastructure Services",
+        content: "We focus on building robust systems that serve as the backbone of your business operations. Our engineering team ensures that every application is secure, fast, and ready to handle growth.",
+        list: [
+          "Progressive Web Apps (PWA)",
+          "Custom CRM & ERP Dashboards",
+          "Cross-Platform Mobile Solutions",
+          "Enterprise System Software",
+          "Legacy System Modernization",
+        ],
+      },
+      {
+        title: "Technical Excellence",
+        content: "Using modern tech stacks, we ensure your business remains ahead of the curve. We prioritize clean code and scalable architecture to support long-term digital transformation.",
+        list: [
+          "Scalable Architecture",
+          "API-First Development",
+          "Cloud Security & Compliance",
+          "Real-time Data Processing",
+          "React & Node.js Integration",
+        ],
+      },
+      {
+        title: "Why FK Business Systems",
+        content: "Our approach combines deep technical expertise with business acumen. We don't just build software; we build tools that optimize your operations and increase overall efficiency.",
+        list: [
+          "Business-centric architecture",
+          "Seamless user experiences",
+          "Future-proof technology stack",
+          "Dedicated technical support",
+        ],
+      },
+    ],
+  },
+
+  /* =====================================================
+      PERFORMANCE LEAD GENERATION SYSTEMS
+  ===================================================== */
+  "growth-systems": {
+    metaTitle: "Performance Lead Generation & Sales Funnels | FKode Solution",
+    metaDescription: "Engineer data-driven sales funnels and automated communication loops to maximize your revenue.",
+    image: "https://images.unsplash.com/photo-1551288049-bbbda5366392?q=80&w=800",
+
+    h1: "Performance Lead Generation Systems",
+    intro: "Transforming traffic into measurable revenue. We engineer data-driven sales funnels and automated communication loops that ensure no lead is left behind in your sales cycle.",
+
+    sections: [
+      {
+        title: "Conversion Engineering",
+        content: "Every click should lead to a conversation. We build the bridge between user interest and business action through optimized UI/UX and strategic call-to-actions.",
+        list: [
+          "High-Conversion UI/UX Design",
+          "Automated Sales Funnel Architecture",
+          "WhatsApp Business API Integration",
+          "Deep CRM Synchronization",
+          "Multi-Channel Conversion Tracking",
+        ],
+      },
+      {
+        title: "Automation Advantage",
+        content: "Stop losing leads to slow response times. Our automated systems engage customers instantly, nurturing them through the pipeline until they are ready to convert.",
+        list: [
+          "Instant Lead Response",
+          "Behavioral Re-targeting",
+          "Dynamic Landing Pages",
+          "Sales Pipeline Visualization",
+          "Automated Email Nurturing",
+        ],
+      },
+      {
+        title: "Why FK Growth Systems",
+        content: "We focus on ROI. Our systems are designed to minimize manual outreach while maximizing the quality and quantity of your incoming business opportunities.",
+        list: [
+          "Data-driven decision making",
+          "Reduced lead leakage",
+          "Automated scalability",
+          "Transparent ROI tracking",
+        ],
+      },
+    ],
+  },
+
+  /* =====================================================
+      INTELLIGENT MARKETING AUTOMATION
+  ===================================================== */
+  "automation-ai": {
+    metaTitle: "Intelligent Marketing Automation & AI Solutions | FKode Solution",
+    metaDescription: "Harness AI algorithms and automated workflows to optimize your reach and scale business 24/7.",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800",
+
+    h1: "Intelligent Marketing Automation",
+    intro: "Harness the power of AI to automate business expansion. We deploy sophisticated algorithms and automated workflows that optimize your global reach 24/7.",
+
+    sections: [
+      {
+        title: "AI-Driven Growth",
+        content: "Move beyond manual marketing. Let intelligent algorithms handle the complexity of modern scaling, allowing your team to focus on high-level strategy.",
+        list: [
+          "AI-Powered Conversational Chatbots",
+          "Automated Campaign Orchestration",
+          "Predictive Performance Analytics",
+          "Dynamic Remarketing Systems",
+          "Algorithm-Based Ad Optimization",
+        ],
+      },
+      {
+        title: "The Neural Advantage",
+        content: "We implement 'Neural Scale' strategies that learn from your business data to improve performance over time, making your marketing smarter every single day.",
+        list: [
+          "Self-Optimizing Campaigns",
+          "Customer Intent Analysis",
+          "AI Content Personalization",
+          "Automated Growth Reporting",
+          "Predictive Churn Modeling",
+        ],
+      },
+      {
+        title: "Why FK AI Solutions",
+        content: "As an AI-first agency, we ensure your business uses the latest in machine learning to stay competitive. We automate the repetitive so you can dominate the creative.",
+        list: [
+          "Cutting-edge AI integration",
+          "24/7 autonomous operations",
+          "Deep learning insights",
+          "Competitive market edge",
+        ],
+      },
+    ],
+  },
+
+  /* =====================================================
      DESIGN & BRANDING
   ===================================================== */
   "branding": {
@@ -284,6 +425,7 @@ const serviceDetailsData = {
     },
   ],
 },
+
 
 };
 

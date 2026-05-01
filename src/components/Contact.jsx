@@ -60,8 +60,12 @@ export default function Contact() {
   }, []);
 
   const contacts = [
-    { label: "Location", value: "Arumbakkam, Chennai – 600106", link: "#", icon: MapPinIcon },
-    { label: "WhatsApp", value: "+91 82487 98337", link: "https://wa.me/918248798337", icon: PhoneIcon },
+{ 
+  label: "Location", 
+  value: "No.82, Korattur, Chennai – 600076", 
+  link: "https://www.google.com/maps/search/?api=1&query=No.82,+Mariyamman+Street,+North+Station+Road,+Annai+Nagar,+Korattur,+Chennai,+600076", 
+  icon: MapPinIcon 
+},    { label: "WhatsApp", value: "+91 82487 98337", link: "https://wa.me/918248798337", icon: PhoneIcon },
     { label: "Email", value: "fkodesolution@gmail.com", link: "mailto:fkodesolution@gmail.com", icon: EnvelopeIcon },
     { label: "Website", value: "www.fkodesolution.com", link: "https://www.fkodesolution.com", icon: GlobeAltIcon },
   ];
