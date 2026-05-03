@@ -77,9 +77,13 @@ export default function FKodeCorporateHero() {
             </div>
           </div>
 
-          <div className="relative hero-anim">
-            <img src={heroImage} alt="" className="rounded-3xl shadow-xl" />
-          </div>
+         <div className="relative hero-anim flex justify-center">
+  <img 
+    src={heroImage} 
+    alt="" 
+    className="rounded-3xl shadow-xl"
+  />
+</div>
         </div>
       </section>
 
@@ -115,8 +119,11 @@ export default function FKodeCorporateHero() {
       
       {/* LEFT SIDE - LOGO & CORE TEXT */}
       <div className="lg:col-span-5">
-        <img src={fkodeLogo} className="w-80 mb-12 " alt="FKode Logo" />
-        
+<img 
+  src={fkodeLogo} 
+  className="w-80 mb-12 mx-auto" 
+  alt="FKode Logo" 
+/>        
         <h3 className="text-3xl font-bold text-slate-900 mb-8 leading-tight">
           Technology Driven <br /> Business Execution.
         </h3>

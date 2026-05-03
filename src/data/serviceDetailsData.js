@@ -1,3 +1,11 @@
+
+/* Images */
+import softwareImg from "../pictures/software.jpg";
+import digitalImg from "../pictures/digital.jpg";
+import registrationImg from "../pictures/registration.jpg";
+import brandingImg from "../pictures/branding.jpg";
+import giftImg from "../pictures/gift.jpg";
+import soft from "../pictures/soft.jpg";
 const serviceDetailsData = {
 
   /* =====================================================
@@ -6,7 +14,7 @@ const serviceDetailsData = {
   "business-systems": {
     metaTitle: "Enterprise Software & Business Systems | FKode Solution",
     metaDescription: "Scalable digital infrastructure, ERP, and custom business applications engineered for high performance.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800",
+    image: softwareImg,
 
     h1: "Business Websites & Enterprise Applications",
     intro: "We architect high-performance digital infrastructure designed for scale. Our solutions bridge the gap between complex business logic and intuitive user experiences for global enterprises.",
@@ -53,7 +61,7 @@ const serviceDetailsData = {
   "growth-systems": {
     metaTitle: "Performance Lead Generation & Sales Funnels | FKode Solution",
     metaDescription: "Engineer data-driven sales funnels and automated communication loops to maximize your revenue.",
-    image: "https://images.unsplash.com/photo-1551288049-bbbda5366392?q=80&w=800",
+    image: digitalImg   ,
 
     h1: "Performance Lead Generation Systems",
     intro: "Transforming traffic into measurable revenue. We engineer data-driven sales funnels and automated communication loops that ensure no lead is left behind in your sales cycle.",
@@ -100,7 +108,7 @@ const serviceDetailsData = {
   "automation-ai": {
     metaTitle: "Intelligent Marketing Automation & AI Solutions | FKode Solution",
     metaDescription: "Harness AI algorithms and automated workflows to optimize your reach and scale business 24/7.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800",
+    image: brandingImg,
 
     h1: "Intelligent Marketing Automation",
     intro: "Harness the power of AI to automate business expansion. We deploy sophisticated algorithms and automated workflows that optimize your global reach 24/7.",
@@ -140,7 +148,52 @@ const serviceDetailsData = {
       },
     ],
   },
+/* =====================================================
+      IT SERVICES & CUSTOM SOFTWARE SOLUTIONS
+===================================================== */
+"it-services": {
+  metaTitle: "Custom Software & Full-Stack Development | FKode Solutions",
+  metaDescription: "Comprehensive development solutions from high-converting websites to complex system applications and mobile platforms.",
+  image: soft,
 
+  h1: "IT Services & Full-Stack Development",
+  intro: "We deliver complete development solutions tailored to your unique requirements. From simple brand presence to high-concurrency software systems, we build digital products that drive results.",
+
+  sections: [
+    {
+      title: "Development Ecosystem",
+      content: "Our core expertise lies in crafting end-to-end solutions. We manage the entire lifecycle of development, ensuring your platform is robust, responsive, and ready to serve your target audience.",
+      list: [
+        "Dynamic Website Development",
+        "High-Performance Web Apps",
+        "Native & Hybrid Mobile Apps",
+        "Desktop / System Applications",
+        "Custom Software Solutions",
+      ],
+    },
+    {
+      title: "Technology & Performance",
+      content: "We use the latest frameworks to ensure your applications are not just functional, but future-proof. Our focus is on speed, security, and seamless integration with existing tools.",
+      list: [
+        "React & Next.js Ecosystem",
+        "Tailwind CSS & UI/UX Design",
+        "Robust Backend Architectures",
+        "SQL & NoSQL Databases",
+        "DevOps & Cloud Hosting",
+      ],
+    },
+    {
+      title: "Why Choose Our IT Solutions",
+      content: "We bridge the gap between complex engineering and user-friendly design. Our team works as your technical partner to ensure every line of code adds value to your business goals.",
+      list: [
+        "Tailored development strategy",
+        "Mobile-first responsive design",
+        "Scalable & clean code practices",
+        "End-to-end technical support",
+      ],
+    },
+  ],
+},
   /* =====================================================
      DESIGN & BRANDING
   ===================================================== */
@@ -150,7 +203,7 @@ const serviceDetailsData = {
   metaDescription:
     "Professional branding and design services for businesses worldwide. Logo, brand identity, packaging & creatives by Chennai-based experts.",
   image:
-    "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=800",
+    brandingImg,
 
   h1: "Branding and Design Services for Businesses Worldwide",
   intro:
@@ -204,7 +257,7 @@ const serviceDetailsData = {
   metaDescription:
     "Professional business registration services in India. GST, FSSAI, trademark & company setup with expert guidance from Chennai-based team.",
   image:
-    "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800",
+    registrationImg,
 
   h1: "Business Registration & Legal Setup Services in India",
   intro:
@@ -257,7 +310,7 @@ const serviceDetailsData = {
     metaDescription:
       "Result-driven digital marketing services worldwide. Chennai-based experts delivering SEO, ads & growth strategies.",
  image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800",
+      digitalImg,
     
     h1: "Digital Marketing Services for Businesses Worldwide",
     intro:
@@ -314,7 +367,7 @@ const serviceDetailsData = {
   metaDescription:
     "Reliable software development company in Chennai delivering secure, scalable custom software solutions for businesses.",
   image:
-    "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800",
+    soft,
 
   h1: "Custom Software Development Company in Chennai",
   intro:
@@ -381,7 +434,7 @@ const serviceDetailsData = {
   metaDescription:
     "Custom corporate gifting solutions for businesses worldwide. Employee kits, promotional gifts & bulk orders from Chennai-based experts.",
   image:
-    "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=500",
+    giftImg,
 
   h1: "Corporate Gifting Solutions for Businesses Worldwide",
   intro:

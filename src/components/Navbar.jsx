@@ -108,7 +108,6 @@ export default function Navbar() {
                               <span className="font-bold uppercase tracking-widest text-[12px] text-slate-800 group-hover/item:text-blue-600">
                                 {id.replace(/-/g, ' ')}
                               </span>
-                              <span className="text-[9px] text-blue-400 font-mono mt-1 opacity-0 group-hover/item:opacity-100">SERVICES_MAIN + DATA_SRC</span>
                             </div>
                             <FiArrowRight className="text-blue-600 opacity-0 group-hover/item:opacity-100 -translate-x-2 group-hover/item:translate-x-0 transition-all" />
                           </button>
@@ -133,7 +132,6 @@ export default function Navbar() {
                               <span className="font-bold uppercase tracking-widest text-[12px] text-slate-800 group-hover/item:text-slate-950">
                                 {id.replace(/-/g, ' ')}
                               </span>
-                              <span className="text-[9px] text-slate-400 font-mono mt-1 opacity-0 group-hover/item:opacity-100">DATA_SRC_ONLY</span>
                             </div>
                             <FiExternalLink className="text-slate-300 group-hover/item:text-blue-600 transition-colors" />
                           </button>
@@ -152,6 +150,8 @@ export default function Navbar() {
           <NavLink to="/why-fkode" className={linkStyles}>Why FKode</NavLink>
           <NavLink to="/industries" className={linkStyles}>Industries</NavLink>
           <NavLink to="/career" className={linkStyles}>Career</NavLink>
+                    <NavLink to="/package" className={linkStyles}>Package</NavLink>
+
           <NavLink to="/contact" className="px-6 py-2 rounded-full bg-gradient-to-r from-red-500 to-red-600 text-white text-[11px] font-bold uppercase tracking-widest shadow-lg hover:scale-105 active:scale-95 transition">Contact</NavLink>
         </div>
 
@@ -254,7 +254,12 @@ export default function Navbar() {
         industries
         </button>
 
-
+<button 
+          onClick={() => { navigate("/package"); setIsMobileMenuOpen(false); }} 
+          className="text-left text-4xl font-black uppercase text-slate-900 tracking-tighter"
+        >
+        package
+        </button>
         {/* CAREERS SECTION (NEW) */}
         <button 
           onClick={() => { navigate("/career"); setIsMobileMenuOpen(false); }} 
@@ -272,7 +277,7 @@ export default function Navbar() {
           <span className="text-2xl font-black text-slate-900 uppercase italic">Join the Squad</span>
           <p className="text-xs text-slate-500 mt-2">Grow with the next-gen tech team in Chennai.</p>
         </button>
-
+   
         {/* CONTACT BUTTON */}
         <button 
           onClick={() => { navigate("/contact"); setIsMobileMenuOpen(false); }} 

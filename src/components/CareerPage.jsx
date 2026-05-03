@@ -6,6 +6,7 @@ import {
   Briefcase, Mail
 } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const CareersPage = () => {
   const navigate = useNavigate(); // Hook-ai inga call pannaum
@@ -15,6 +16,7 @@ const CareersPage = () => {
     "Mobile App Developers",
     "UI/UX Designers",
     "Digital Marketing Executives",
+    "DevOps Engineers",
     "Sales & Business Development"
   ];
 
@@ -37,17 +39,14 @@ const CareersPage = () => {
             </div>
             <h1 className="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] text-gray-900 mb-8">
               Join a team that builds <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 italic">real businesses, systems, and impact.</span>
+              <span className="inline-block py-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 italic">real businesses, systems, and impact.</span>
             </h1>
             <p className="text-xl text-gray-600 mb-10 font-medium">Internship or full-time — your journey starts here.</p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <button 
-                onClick={() => navigate('/contact')} // Contact page-ku pogum
-                className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition uppercase tracking-wider text-sm shadow-lg shadow-blue-200"
-              >
-                Apply Now
-              </button>
+               <button onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSf-CL3xLf3Pjx3cIKqHDT1WjFgogzJc_fn0Q9c4yPrssGvpnQ/viewform?usp=header', '_blank')} className="border border-gray-700 px-10 py-4 rounded-xl font-bold hover:bg-gray-800 transition-all active:scale-95">Apply for Full-Time</button>
+                          <button onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSe_0JszHSDacJClew_B6yuCN05M0muIFMI3voBO1JLnW_5fOQ/viewform?usp=header', '_blank')} className="bg-blue-600 px-10 py-4 rounded-xl font-bold hover:bg-blue-500 transition-all active:scale-95"> Apply for Internship</button>
+
 
               <button 
                 onClick={() => {
@@ -89,12 +88,12 @@ const CareersPage = () => {
               <ul className="space-y-4 mb-8">
                 {fullTimeRoles.map(role => <li key={role} className="text-gray-300 font-medium border-b border-gray-800 pb-2">{role}</li>)}
               </ul>
-              <button 
-                onClick={() => navigate('/contact')}
-                className="w-full py-4 bg-white text-gray-900 rounded-xl font-bold uppercase tracking-widest text-xs hover:bg-blue-500 hover:text-white transition-colors"
-              >
-                Apply for Full-Time
-              </button>
+             <button 
+  onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSf-CL3xLf3Pjx3cIKqHDT1WjFgogzJc_fn0Q9c4yPrssGvpnQ/viewform?usp=header', '_blank')}
+  className="w-full py-4 bg-white text-gray-900 rounded-xl font-bold uppercase tracking-widest text-xs hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-sm hover:shadow-blue-500/20"
+>
+  Apply for Full-Time
+</button>
             </div>
             <div className="p-8 bg-blue-600 text-white rounded-3xl group hover:scale-[1.02] transition-transform duration-300">
               <h3 className="text-xl font-bold mb-6 flex items-center gap-2"><GraduationCap /> Internship Program</h3>
@@ -106,11 +105,11 @@ const CareersPage = () => {
                 <li>✓ Performance-based full-time opportunity</li>
               </ul>
               <button 
-                onClick={() => navigate('/contact')}
-                className="w-full py-4 bg-gray-950 text-white rounded-xl font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-gray-950 transition-colors"
-              >
-                Apply for Internship
-              </button>
+  onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSe_0JszHSDacJClew_B6yuCN05M0muIFMI3voBO1JLnW_5fOQ/viewform?usp=header', '_blank')}
+  className="w-full py-4 bg-gray-950 text-white rounded-xl font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-gray-950 transition-all duration-300 border border-transparent hover:border-gray-950"
+>
+  Apply for Internship
+</button>
             </div>
           </div>
         </section>
@@ -146,8 +145,10 @@ const CareersPage = () => {
             <h2 className="text-4xl md:text-6xl font-black mb-6 uppercase tracking-tighter">Ready to <span className="text-blue-500">start?</span></h2>
             <p className="text-gray-400 mb-10 text-lg">Choose your path and build the future with us.</p>
             <div className="flex justify-center gap-4 flex-wrap">
-              <button onClick={() => navigate('/contact')} className="bg-blue-600 px-10 py-4 rounded-xl font-bold hover:bg-blue-500 transition-all active:scale-95">Apply for Full-Time</button>
-              <button onClick={() => navigate('/contact')} className="border border-gray-700 px-10 py-4 rounded-xl font-bold hover:bg-gray-800 transition-all active:scale-95">Apply for Internship</button>
+              
+              <button onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSf-CL3xLf3Pjx3cIKqHDT1WjFgogzJc_fn0Q9c4yPrssGvpnQ/viewform?usp=header', '_blank')} className="border border-gray-700 px-10 py-4 rounded-xl font-bold hover:bg-gray-800 transition-all active:scale-95">Apply for Full-Time</button>
+                          <button onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSe_0JszHSDacJClew_B6yuCN05M0muIFMI3voBO1JLnW_5fOQ/viewform?usp=header', '_blank')} className="bg-blue-600 px-10 py-4 rounded-xl font-bold hover:bg-blue-500 transition-all active:scale-95"> Apply for Internship</button>
+
             </div>
             <div className="mt-12 flex flex-col items-center gap-2">
                <a href="mailto:careers@fkodesolution.com" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">

@@ -17,6 +17,7 @@ import TermsConditions from "./components/TermsConditions";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import CookiePolicy from "./components/CookiePolicy";
 import CareerPage from "./components/CareerPage"; 
+import Package from "./components/Package";
 
 
 
@@ -42,10 +43,13 @@ function App() {
         <Route path="/services/:id" element={<ServiceDetails />} />
         <Route path="/why-fkode" element={<WhyChooseFKode />} />
         <Route path="/industries" element={<Industries />} />
+                <Route path="/industries" element={<Industries />} />
+
         <Route path="/founder" element={<Founder />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/cta" element={<CTA />} />
                 <Route path="/career" element={<CareerPage />} />
+                <Route path="/package" element={<Package />} />
 
         <Route path="/contact" element={<Contact />} />
         <Route path="/TermsConditions" element={<TermsConditions />} />
