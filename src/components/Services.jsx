@@ -15,7 +15,7 @@ import soft from "../pictures/soft.jpg";
 const coreServices = [
   {
     id: "business-systems",
-    title: "Business Websites & Enterprise Applications",
+    title: "Business Websites  Applications",
     tag: "Systems Engineering",
     desc: "We architect high-performance digital infrastructure designed for scale. Our solutions bridge the gap between complex business logic and intuitive user experiences.",
     image: softwareImg,
@@ -23,7 +23,7 @@ const coreServices = [
   },
   {
     id: "growth-systems",
-    title: "Performance Lead Generation Systems",
+    title: " Lead Generation Systems",
     tag: "Growth Logic",
     desc: "Transforming traffic into measurable revenue. We engineer data-driven sales funnels and automated communication loops that ensure no lead is left behind.",
     image: digitalImg,
@@ -31,7 +31,7 @@ const coreServices = [
   },
   {
     id: "automation-ai",
-    title: "Intelligent Marketing Automation",
+    title: " Marketing Automation",
     tag: "Neural Scale",
     desc: "Harness the power of AI to automate business expansion. We deploy sophisticated algorithms and automated workflows that optimize your reach 24/7.",
     image: brandingImg,
@@ -39,7 +39,7 @@ const coreServices = [
   },
   {
     id: "it-services",
-    title: "Next-Gen Software Engineering",
+    title: " Software Development",
     tag: "Full-Stack Ops",
     desc: "Complete development solutions engineered for high performance and scalability. We architect custom digital products that bridge the gap between complex logic and seamless user experience.",
     image: soft, // Variable fixed here
@@ -128,9 +128,8 @@ export default function Services() {
 </header>
 
         <div className="mb-20">
-          <span className="text-blue-600 font-mono text-xs font-black tracking-[0.5em] block mb-4">// MODULE 01</span>
           <h3 className="text-5xl md:text-6xl font-black uppercase tracking-tighter text-slate-900">
-            COre <span className="text-slate-300 italic">Services.</span>
+            COre Services.
           </h3>
         </div>
 
@@ -191,9 +190,8 @@ export default function Services() {
         <div className="mb-32">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-6">
             <div>
-              <span className="text-blue-600 font-mono text-xs font-black tracking-[0.5em] block mb-4">// MODULE 02</span>
               <h3 className="text-5xl md:text-6xl font-black uppercase tracking-tighter text-slate-900">
-                Extended <span className="text-slate-300 italic">Services.</span>
+                Extended Services.
               </h3>
             </div>
             <div className="hidden md:block h-[1px] flex-1 bg-slate-200 mx-10 mb-4"></div>
@@ -319,9 +317,9 @@ export default function Services() {
   </div>
   
   {/* Background Branding */}
-  <div className="absolute -bottom-10 -right-10 text-[12rem] md:text-[20rem] font-black text-white/[0.02] pointer-events-none uppercase select-none">
-    FKode
-  </div>
+<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[12rem] md:text-[20rem] font-black text-white/[0.02] pointer-events-none uppercase select-none">
+  FKode
+</div>
 </div>
 
 

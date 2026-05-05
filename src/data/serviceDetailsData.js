@@ -16,7 +16,7 @@ const serviceDetailsData = {
     metaDescription: "Scalable digital infrastructure, ERP, and custom business applications engineered for high performance.",
     image: softwareImg,
 
-    h1: "Business Websites & Enterprise Applications",
+    h1: "Business Websites  Applications",
     intro: "We architect high-performance digital infrastructure designed for scale. Our solutions bridge the gap between complex business logic and intuitive user experiences for global enterprises.",
 
     sections: [
@@ -63,7 +63,7 @@ const serviceDetailsData = {
     metaDescription: "Engineer data-driven sales funnels and automated communication loops to maximize your revenue.",
     image: digitalImg   ,
 
-    h1: "Performance Lead Generation Systems",
+    h1: " Lead Generation Systems",
     intro: "Transforming traffic into measurable revenue. We engineer data-driven sales funnels and automated communication loops that ensure no lead is left behind in your sales cycle.",
 
     sections: [
@@ -110,7 +110,7 @@ const serviceDetailsData = {
     metaDescription: "Harness AI algorithms and automated workflows to optimize your reach and scale business 24/7.",
     image: brandingImg,
 
-    h1: "Intelligent Marketing Automation",
+    h1: " Marketing Automation",
     intro: "Harness the power of AI to automate business expansion. We deploy sophisticated algorithms and automated workflows that optimize your global reach 24/7.",
 
     sections: [
@@ -156,7 +156,7 @@ const serviceDetailsData = {
   metaDescription: "Comprehensive development solutions from high-converting websites to complex system applications and mobile platforms.",
   image: soft,
 
-  h1: "IT Services & Full-Stack Development",
+  h1: "IT Services",
   intro: "We deliver complete development solutions tailored to your unique requirements. From simple brand presence to high-concurrency software systems, we build digital products that drive results.",
 
   sections: [
@@ -205,7 +205,7 @@ const serviceDetailsData = {
   image:
     brandingImg,
 
-  h1: "Branding and Design Services for Businesses Worldwide",
+  h1: "Branding and Design Services ",
   intro:
     "FKode Solution is a creative branding and design company based in Chennai, delivering impactful brand identity and design services to businesses across India and international markets.",
 
@@ -259,7 +259,7 @@ const serviceDetailsData = {
   image:
     registrationImg,
 
-  h1: "Business Registration & Legal Setup Services in India",
+  h1: "Business Registration ",
   intro:
     "FKode Solution provides professional business registration and legal setup services in India, supporting entrepreneurs, startups, and global clients looking to establish or operate businesses legally and compliantly.",
 
@@ -312,7 +312,7 @@ const serviceDetailsData = {
  image:
       digitalImg,
     
-    h1: "Digital Marketing Services for Businesses Worldwide",
+    h1: "Digital Marketing Services ",
     intro:
       "FKode Solution is a Chennai-based digital marketing company providing performance-driven digital marketing services to businesses across India and global markets.",
 
@@ -369,7 +369,7 @@ const serviceDetailsData = {
   image:
     soft,
 
-  h1: "Custom Software Development Company in Chennai",
+  h1: "Custom Software Development ",
   intro:
     "FKode Solution is a reliable software development company in Chennai, delivering secure, scalable, and user-friendly software solutions for businesses of all sizes.",
 
@@ -436,7 +436,7 @@ const serviceDetailsData = {
   image:
     giftImg,
 
-  h1: "Corporate Gifting Solutions for Businesses Worldwide",
+  h1: "Corporate Gifting Solutions ",
   intro:
     "FKode Solution offers professional corporate gifting solutions for businesses across India and global markets. Based in Chennai, we help brands strengthen relationships through customized, high-quality corporate gifts.",
 

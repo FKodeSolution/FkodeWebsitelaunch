@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Background from "../pictures/Background3.png";
-import { motion } from "framer-motion";
+import Background from "../pictures/Background3.png"; 
+import { motion, AnimatePresence } from "framer-motion";
 
 import {
   MapPinIcon,
@@ -16,43 +16,35 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Contact() {
   const sectionRef = useRef(null);
   const [formMessage, setFormMessage] = useState("");
+  const formRef = useRef(null); // Form-ah refer panna
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      // 1. Reveal Animation for Text and Cards
+    let ctx = gsap.context(() => {
       gsap.fromTo(
         ".reveal",
-        { opacity: 0, y: 50 },
+        { opacity: 0, y: 60 },
         {
           opacity: 1,
           y: 0,
-          stagger: 0.15,
-          duration: 1,
-          ease: "power3.out",
+          stagger: 0.2,
+          duration: 1.2,
+          ease: "power4.out",
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 75%",
+            start: "top 80%",
+            toggleActions: "play none none reverse",
           },
         }
       );
 
-      // 2. Floating Animation for Orbs & Background Rings
       gsap.to(".floating-shape", {
-        y: "random(-50, 60)",
-        x: "random(-30, 40)",
-        duration: "random(3, 5)",
+        y: "random(-40, 40)",
+        x: "random(-20, 20)",
+        duration: "random(4, 6)",
         repeat: -1,
         yoyo: true,
         ease: "sine.inOut",
-        stagger: 0.5
-      });
-
-      // 3. Slow Rotation for the Big Rings
-      gsap.to(".big-ring", {
-        rotate: 360,
-        duration: 40,
-        repeat: -1,
-        ease: "none"
+        stagger: { each: 0.5, from: "random" }
       });
     }, sectionRef);
 
@@ -60,97 +52,94 @@ export default function Contact() {
   }, []);
 
   const contacts = [
-{ 
-  label: "Location", 
-  value: "No.82, Korattur, Chennai – 600076", 
-  link: "https://www.google.com/maps/search/?api=1&query=No.82,+Mariyamman+Street,+North+Station+Road,+Annai+Nagar,+Korattur,+Chennai,+600076", 
-  icon: MapPinIcon 
-},    { label: "WhatsApp", value: "+91 82487 98337", link: "https://wa.me/918248798337", icon: PhoneIcon },
-    { label: "Email", value: "fkodesolution@gmail.com", link: "mailto:fkodesolution@gmail.com", icon: EnvelopeIcon },
+    { 
+      label: "Office Address", 
+      value: "No.82, Mariyammal Street, North Station Road, Annai Nagar, Korattur, Chennai – 600076", 
+      link: "https://www.google.com/maps/search/?api=1&query=No.82,+Mariyamman+Street,+North+Station+Road,+Annai+Nagar,+Korattur,+Chennai,+600076", 
+      icon: MapPinIcon 
+    },
+    { 
+      label: "WhatsApp", 
+      value: "+91 82487 98337 | +44 3171 2433", 
+      link: "https://wa.me/918248798337", 
+      icon: PhoneIcon 
+    },
+    { label: "Email", value: "info@fkodesolution@gmail.com", link: "mailto:info@fkodesolution@gmail.com", icon: EnvelopeIcon },
     { label: "Website", value: "www.fkodesolution.com", link: "https://www.fkodesolution.com", icon: GlobeAltIcon },
   ];
 
-  const handleSubmit = (e) => {
+  // Google Sheet Submit Logic
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormMessage("Thank you! Your message has been sent.");
-    e.target.reset();
+    setFormMessage("Sending...");
+
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzauIg91h3BjsYrZfPHFqU2vwitrqUiO9WQ-TxTjKUS3woBmNna_mjL6t1ax91KhiWsQg/exec"; // Inga unga URL-ah paste pannunga
+    const formData = new FormData(formRef.current);
+
+    try {
+      await fetch(SCRIPT_URL, {
+        method: "POST",
+        body: formData,
+        mode: "no-cors", // Google Apps Script-ku ithu kattiyaayam
+      });
+      
+      setFormMessage("Success! Your message is saved in our sheet.");
+      formRef.current.reset();
+    } catch (error) {
+      setFormMessage("Error! Please try again later.");
+      console.error("Error!", error.message);
+    }
+
     setTimeout(() => setFormMessage(""), 5000);
   };
 
   return (
-    <section ref={sectionRef} id="contact" className="relative py-32 bg-[#f8faff] text-gray-900 overflow-hidden">
-      
-      {/* ===== ⭕ DYNAMIC BACKGROUND WITH BIG RINGS ===== */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        {/* Main Background Texture */}
+    <section 
+      ref={sectionRef} 
+      id="contact" 
+      className="relative py-24 lg:py-32 bg-[#fcfdff] text-slate-900 overflow-hidden"
+    >
+      <div className="absolute inset-0 z-0 pointer-events-none select-none">
         <div 
-          className="absolute inset-0 opacity-[0.3] " 
-          style={{ backgroundImage: `url(${Background})`, backgroundSize: 'cover' }} 
+          className="absolute inset-0 opacity-[0.15] grayscale" 
+          style={{ backgroundImage: `url(${Background})`, backgroundPosition: 'center', backgroundSize: 'cover' }} 
         />
-        
-     
-        {/* Colorful Gradients & Floating Orbs */}
-        <div className="floating-shape absolute -top-20 -left-20 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-purple-400/10 rounded-full blur-[80px]" />
-        <div className="floating-shape absolute top-1/4 -right-20 w-80 h-80 bg-gradient-to-tr from-cyan-300/20 to-blue-500/10 rounded-full blur-[100px]" />
-        
-        {/* Center Radial Glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-50/40 via-transparent to-transparent" />
-
-        {/* Mesh Dotted Pattern */}
-        <div className="absolute right-0 top-0 w-1/3 h-full opacity-[0.1]" 
-             style={{ backgroundImage: "radial-gradient(#000 2px, transparent 2px)", backgroundSize: "32px 32px" }} />
+        <div className="floating-shape absolute top-[-10%] left-[-5%] w-[500px] h-[500px] bg-blue-400/10 rounded-full blur-[120px]" />
+        <div className="floating-shape absolute bottom-[10%] right-[-5%] w-[400px] h-[400px] bg-indigo-400/10 rounded-full blur-[100px]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 z-10">
-        
-        {/* Header Section */}
-        <div className="max-w-4xl mb-24 reveal">
+        <div className="max-w-4xl mb-20 reveal">
           <div className="flex items-center gap-3 mb-6">
-            <span className="w-8 h-[2px] bg-blue-600"></span>
-            <h4 className="text-blue-600 font-bold tracking-[0.3em] uppercase text-sm">Get in Touch</h4>
+            <span className="w-12 h-[2px] bg-blue-600"></span>
+            <h4 className="text-blue-600 font-black tracking-[0.4em] uppercase text-xs">Reach Out</h4>
           </div>
-<h2
-  className="
-    text-4xl 
-    sm:text-5xl 
-    md:text-6xl 
-    lg:text-8xl 
-    font-black 
-    text-slate-900 
-    leading-[1] 
-    tracking-tighter
-  "
->
-            LET'S BUILD <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 italic">
-              SOMETHING GREAT.
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-black text-slate-950 leading-[0.95] tracking-tighter">
+            LET'S SCALE <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-400 italic">
+              YOUR VISION.
             </span>
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
-          
-         <div className="lg:col-span-5 reveal">
-            <div className="bg-white/70 backdrop-blur-xl p-6 sm:p-8 md:p-10 rounded-[2.5rem] shadow-2xl">
-              <h3 className="text-xs font-black text-blue-600 mb-10 uppercase tracking-[0.3em]">
-                Contact Channels
+        <div className="grid lg:grid-cols-12 gap-16">
+          <div className="lg:col-span-5 reveal">
+            <div className="bg-white/40 backdrop-blur-2xl border border-white/60 p-8 md:p-12 rounded-[3rem] shadow-sm">
+              <h3 className="text-[10px] font-black text-slate-400 mb-12 uppercase tracking-[0.3em]">
+                Contact Details
               </h3>
 
-              <div className="space-y-8">
+              <div className="space-y-10">
                 {contacts.map((item, i) => (
-                  <a
-                    key={i}
-                    href={item.link}
-                    className="flex items-center gap-5 group"
-                  >
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-slate-900 rounded-2xl flex items-center justify-center group-hover:bg-blue-600 transition-all">
+                  <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="flex items-start gap-6 group">
+                    <div className="w-14 h-14 bg-slate-950 rounded-2xl flex items-center justify-center group-hover:bg-blue-600 group-hover:rotate-6 transition-all duration-500 shrink-0">
                       <item.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">
+                      <p className="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-1">
                         {item.label}
                       </p>
-                      <p className="text-base sm:text-lg font-bold text-slate-800 group-hover:text-blue-600">
+                      <p className="text-base sm:text-lg font-bold text-slate-800 leading-snug group-hover:text-blue-600 transition-colors">
                         {item.value}
                       </p>
                     </div>
@@ -160,56 +149,67 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* RIGHT – FORM */}
           <div className="lg:col-span-7 reveal">
             <form
+              ref={formRef}
               onSubmit={handleSubmit}
-              className="bg-white/80 backdrop-blur-md p-6 sm:p-8 md:p-14 rounded-[3rem] shadow-2xl"
+              className="bg-white p-8 md:p-16 rounded-[3.5rem] shadow-[0_32px_64px_-15px_rgba(0,0,0,0.05)] border border-slate-100"
             >
-              <div className="grid md:grid-cols-2 gap-8 mb-10">
+              <div className="grid md:grid-cols-2 gap-10 mb-12">
                 {["Name", "Email"].map((field) => (
                   <div key={field} className="relative">
                     <input
                       required
+                      name={field} // Mukkiyam: Sheet-ku ithu thaan header-ah pogum
                       type={field === "Email" ? "email" : "text"}
                       placeholder=" "
-                      className="peer w-full border-b-2 border-slate-200 py-3 sm:py-4 bg-transparent outline-none text-base sm:text-lg font-bold focus:border-blue-600"
+                      className="peer w-full border-b-2 border-slate-200 py-4 bg-transparent outline-none text-lg font-bold focus:border-blue-600 transition-colors"
                     />
-                    <label className="absolute left-0 top-4 text-slate-400 text-[10px] uppercase tracking-widest peer-focus:-top-4 peer-focus:text-blue-600 peer-[:not(:placeholder-shown)]:-top-4 transition-all">
+                    <label className="absolute left-0 top-4 text-slate-400 text-xs font-bold uppercase tracking-widest pointer-events-none transition-all duration-300
+                      peer-focus:-top-4 peer-focus:text-blue-600 peer-focus:text-[10px]
+                      peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-[10px]">
                       {field}
                     </label>
                   </div>
                 ))}
               </div>
 
-              <div className="relative mb-12">
+              <div className="relative mb-16">
                 <textarea
                   required
-                  rows="4"
+                  name="Message" // Mukkiyam: Sheet column header
+                  rows="3"
                   placeholder=" "
-                  className="peer w-full border-b-2 border-slate-200 py-3 sm:py-4 bg-transparent outline-none text-base sm:text-lg font-bold focus:border-blue-600 resize-none"
+                  className="peer w-full border-b-2 border-slate-200 py-4 bg-transparent outline-none text-lg font-bold focus:border-blue-600 resize-none transition-colors"
                 />
-                <label className="absolute left-0 top-4 text-slate-400 text-[10px] uppercase tracking-widest peer-focus:-top-4 peer-focus:text-blue-600 peer-[:not(:placeholder-shown)]:-top-4 transition-all">
-                  Brief us about your project
+                <label className="absolute left-0 top-4 text-slate-400 text-xs font-bold uppercase tracking-widest pointer-events-none transition-all duration-300
+                  peer-focus:-top-4 peer-focus:text-blue-600 peer-focus:text-[10px]
+                  peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-[10px]">
+                  Project Brief
                 </label>
               </div>
 
               <button
                 type="submit"
-                className="w-full md:w-auto px-10 sm:px-16 py-5 sm:py-6 bg-slate-900 text-white rounded-2xl font-black uppercase text-xs tracking-[0.2em] hover:bg-blue-600 transition-all shadow-xl"
+                className="group relative w-full md:w-auto overflow-hidden px-12 py-6 bg-slate-950 text-white rounded-2xl font-black uppercase text-[10px] tracking-[0.3em] transition-all hover:shadow-2xl hover:shadow-blue-200"
               >
-                Submit Proposal
+                <span className="relative z-10">Send Message</span>
+                <div className="absolute inset-0 bg-blue-600 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300" />
               </button>
 
-              {formMessage && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="mt-8 p-4 bg-blue-600 text-white rounded-xl text-center font-bold text-sm"
-                >
-                  {formMessage}
-                </motion.div>
-              )}
+              <AnimatePresence>
+                {formMessage && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    className="mt-8 text-blue-600 font-bold text-sm flex items-center gap-2"
+                  >
+                    <span className="w-2 h-2 bg-blue-600 rounded-full animate-pulse" />
+                    {formMessage}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </form>
           </div>
         </div>

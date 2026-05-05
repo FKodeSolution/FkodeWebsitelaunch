@@ -4,6 +4,10 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import heroImage from "../pictures/Home.jpg";
 import fkodeLogo from "../pictures/fkode.jpg";
 import { Link } from "react-router-dom";
+import ng from "../pictures/NG.jpg";
+import ruthi from "../pictures/ruthi.jpg";
+import tiptop from "../pictures/tiptop.png";
+import surthibai from "../pictures/surthibai.jpeg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -135,15 +139,28 @@ export default function FKodeCorporateHero() {
         </p>
 
         <div className="mt-12 flex items-center gap-6">
-            <div className="flex -space-x-3">
-                {[1,2,3].map(i => (
-                    <div key={i} className="w-12 h-12 rounded-full border-4 border-white bg-slate-200"></div>
-                ))}
-            </div>
-            <p className="text-sm font-bold text-slate-900 uppercase tracking-tighter">
-                Trusted by 50+ Global Entities
-            </p>
-        </div>
+  
+  <div className="flex -space-x-3">
+    {[ 
+      ng, 
+      ruthi,
+      tiptop,
+      surthibai
+    ].map((img, i) => (
+      <img
+        key={i}
+        src={img}
+        alt="client"
+        className="w-12 h-12 rounded-full border-4 border-white object-cover"
+      />
+    ))}
+  </div>
+
+  <p className="text-sm font-bold text-slate-900 uppercase tracking-tighter">
+    Trusted by 50+ Global Entities
+  </p>
+
+</div>
       </div>
 
       {/* RIGHT SIDE - CONTENT LIST (NO BOXES) */}

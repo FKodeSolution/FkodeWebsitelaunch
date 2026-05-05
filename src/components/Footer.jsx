@@ -7,6 +7,8 @@ import {
   FaMapMarkerAlt,
   FaWhatsapp,
 } from "react-icons/fa";
+import logo from "../pictures/fkode.jpg";
+
 
 export default function Footer() {
   const bubbleRefs = useRef([]);
@@ -55,35 +57,29 @@ export default function Footer() {
         className="absolute -bottom-40 -right-40 w-[700px] h-[700px] bg-orange-500/20 rounded-full blur-[140px]"
       />
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-10">
-        {/* Main Grid Structure */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12">
-          
-          {/* 1. BRAND SECTION (Span 3) */}
-          <div className="lg:col-span-3 flex flex-col space-y-4">
-            <Link to="/" className="inline-block">
-              <div
-                ref={logoRef}
-                className="text-2xl font-extrabold font-automata flex flex-wrap gap-1"
-              >
-                {"FKode Solution".split("").map((c, i) => (
-                  <span
-                    key={i}
-                    className={
-                      c !== " "
-                        ? "text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-600"
-                        : ""
-                    }
-                  >
-                    {c}
-                  </span>
-                ))}
-              </div>
-            </Link>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Your Complete Business Solution Partner. Delivering branding, software engineering, and global scaling.
-            </p>
-          </div>
+     <div className="relative max-w-7xl mx-auto px-6 md:px-10">
+  {/* Main Grid Structure */}
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12">
+    
+    {/* 1. BRAND SECTION (Span 3) */}
+    <div className="lg:col-span-3 flex flex-col space-y-4">
+      
+      <Link to="/" className="inline-block">
+        <img
+          ref={logoRef}
+          src={logo}
+          alt="FKode Solution"
+          className="w-40 h-auto object-contain"
+        />
+      </Link>
+
+      <p className="text-gray-400 text-sm leading-relaxed">
+        Your Complete Business Solution Partner. Delivering branding, software engineering, and global scaling.
+      </p>
+
+    </div>
+ 
+
 
           {/* 2. QUICK LINKS (Span 2) */}
           <div className="lg:col-span-2 lg:pl-6">
@@ -95,7 +91,7 @@ export default function Footer() {
               <li><Link to="/services" className="hover:text-blue-500 transition-colors">Services</Link></li>
               <li><Link to="/why-fkode" className="hover:text-blue-500 transition-colors">Why FKode</Link></li>
                             <li><Link to="/industries" className="hover:text-blue-500 transition-colors"> industries</Link></li>
-
+              <li><Link to="/package" className="hover:text-blue-500 transition-colors">Packages</Link></li>
               <li><Link to="/career" className="hover:text-blue-500 transition-colors">Careers</Link></li>
               <li><Link to="/contact" className="hover:text-blue-500 transition-colors">Contact</Link></li>
             </ul>
