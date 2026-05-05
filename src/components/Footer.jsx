@@ -64,18 +64,18 @@ export default function Footer() {
     {/* 1. BRAND SECTION (Span 3) */}
     <div className="lg:col-span-3 flex flex-col space-y-4">
       
-      <Link to="/" className="inline-block">
-        <img
-          ref={logoRef}
-          src={logo}
-          alt="FKode Solution"
-          className="w-40 h-auto object-contain"
-        />
-      </Link>
+      <Link to="/" className="flex justify-center lg:justify-start">
+  <img
+    ref={logoRef}
+    src={logo}
+    alt="FKode Solution"
+    className="w-40 h-auto object-contain"
+  />
+</Link>
 
-      <p className="text-gray-400 text-sm leading-relaxed">
-        Your Complete Business Solution Partner. Delivering branding, software engineering, and global scaling.
-      </p>
+     <p className="text-gray-400 text-sm leading-relaxed text-center lg:text-left">
+  Your Complete Business Solution Partner. Delivering branding, software engineering, and global scaling.
+</p>
 
     </div>
  
