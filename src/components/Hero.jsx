@@ -80,7 +80,12 @@ const FKodeCountdown = () => {
            REIMAGINED
           </h1>
           <p className="text-[10px] sm:text-xs md:text-sm font-mono font-black text-amber-500 uppercase tracking-[0.35em] block">
+<<<<<<< HEAD
 Launching Soon          </p>
+=======
+             OFFICIAL WEBSITE LAUNCH TOMORROW AT 11:00 AM
+          </p>
+>>>>>>> 2986930d5d83598420c1b65337ce834bf09f9c5b
         </div>
 
         <div className="w-32 h-[1px] bg-gradient-to-r from-transparent via-amber-500/50 to-transparent relative shrink-0">
@@ -120,7 +125,7 @@ Launching Soon          </p>
 
         <div className="flex items-center gap-3 font-mono text-[9px] sm:text-xs font-black tracking-[0.3em] text-neutral-400 uppercase pt-2 bg-[#000000] w-full justify-center relative z-10">
           <span className="text-amber-400 font-black">13 JUNE 2026</span>
-          <span className="text-neutral-800">//</span>
+          <span className="text-neutral-800">{'//'}</span>
           <span className="text-neutral-200">JOIN THE EXPERIENCE</span>
         </div>
       </div>
