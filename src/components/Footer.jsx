@@ -7,7 +7,7 @@ import {
   FaMapMarkerAlt,
   FaWhatsapp,
 } from "react-icons/fa";
-import logo from "../pictures/fkode.jpg";
+import logo from "../pictures/logo copy 2.png";
 
 
 export default function Footer() {
@@ -90,7 +90,7 @@ export default function Footer() {
               <li><Link to="/" className="hover:text-blue-500 transition-colors">Home</Link></li>
               <li><Link to="/services" className="hover:text-blue-500 transition-colors">Services</Link></li>
               <li><Link to="/why-fkode" className="hover:text-blue-500 transition-colors">Why FKode</Link></li>
-                            <li><Link to="/industries" className="hover:text-blue-500 transition-colors"> industries</Link></li>
+                            <li><Link to="/industries" className="hover:text-blue-500 transition-colors"> Industries</Link></li>
               <li><Link to="/package" className="hover:text-blue-500 transition-colors">Packages</Link></li>
               <li><Link to="/career" className="hover:text-blue-500 transition-colors">Careers</Link></li>
               <li><Link to="/contact" className="hover:text-blue-500 transition-colors">Contact</Link></li>
@@ -105,10 +105,10 @@ export default function Footer() {
                 Core Tech
               </h3>
               <ul className="space-y-4 text-sm text-gray-400">
-                <li><Link to="/services/business-systems" className="hover:text-white transition-all flex items-center gap-2 group"><span className="w-1 h-[1px] bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>Systems</Link></li>
-                <li><Link to="/services/automation-ai" className="hover:text-white transition-all flex items-center gap-2 group"><span className="w-1 h-[1px] bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>AI & Automation</Link></li>
-                <li><Link to="/services/software" className="hover:text-white transition-all flex items-center gap-2 group"><span className="w-1 h-[1px] bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>Software Dev</Link></li>
-                <li><Link to="/services/growth-systems" className="hover:text-white transition-all flex items-center gap-2 group"><span className="w-1 h-[1px] bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>Growth</Link></li>
+                <li><Link to="/services/Digital Product Engineering" className="hover:text-white transition-all flex items-center gap-2 group"><span className="w-1 h-[1px] bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>Digital Product Engineering</Link></li>
+                <li><Link to="/services/Growth & Customer Acquisition" className="hover:text-white transition-all flex items-center gap-2 group"><span className="w-1 h-[1px] bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>Growth & Customer Acquisition</Link></li>
+                <li><Link to="/services/Intelligent Automation Systems" className="hover:text-white transition-all flex items-center gap-2 group"><span className="w-1 h-[1px] bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>Intelligent Automation Systems</Link></li>
+                <li><Link to="/servicesStartup" className="hover:text-white transition-all flex items-center gap-2 group"><span className="w-1 h-[1px] bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>Startup & Business Launch Solutions</Link></li>
               </ul>
             </div>
             {/* Extended Solutions */}
@@ -117,9 +117,9 @@ export default function Footer() {
                 Extended
               </h3>
               <ul className="space-y-4 text-sm text-gray-400">
+                                <li><Link to="/services/registration" className="hover:text-white transition-colors">Registration</Link></li>
+
                 <li><Link to="/services/branding" className="hover:text-white transition-colors">Branding</Link></li>
-                <li><Link to="/services/registration" className="hover:text-white transition-colors">Registration</Link></li>
-                <li><Link to="/services/marketing" className="hover:text-white transition-colors">Marketing</Link></li>
                 <li><Link to="/services/gifting" className="hover:text-white transition-colors">Gifting</Link></li>
               </ul>
             </div>
@@ -147,6 +147,12 @@ export default function Footer() {
                 <FaPhone className="text-green-400" />
                 <a href="tel:+918248798337" className="hover:text-white transition-colors">+91 82487 98337</a>
               </li>
+
+              <li className="flex items-center gap-3">
+                <FaPhone className="text-green-400" />
+                <a  className="hover:text-white transition-colors"> +44 3171 2433</a>
+              </li>
+
               <li className="flex items-center gap-3">
                 <FaGlobe className="text-blue-500" />
                 <a href="https://www.fkodesolution.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">fkodesolution.com</a>

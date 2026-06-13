@@ -92,7 +92,7 @@ export default function ServiceDetails() {
               <img
                 src={service.image}
                 alt={service.h1}
-                className="relative rounded-[3rem] shadow-2xl w-full h-[500px] object-cover border-[12px] border-white group-hover:scale-[1.02] transition-transform duration-700"
+                className="relative rounded-[3rem] shadow-2xl w-full h-[500px] object-cover border-[12px] border-white group-hover:scale-[1.02] transition-transform duration-700 w-full h-auto object-contain md:object-cover"
               />
             </div>
           </motion.div>

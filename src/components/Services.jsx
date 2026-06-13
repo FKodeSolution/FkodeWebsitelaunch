@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
 import { motion } from "framer-motion";
-import { FiArrowUpRight, FiCpu, FiExternalLink } from "react-icons/fi";
+import { FiArrowUpRight, FiCpu, FiTarget, FiZap, FiRocket } from "react-icons/fi";
+import { FaRocket } from "react-icons/fa";
 
 /* Images */
 import softwareImg from "../pictures/software.jpg";
@@ -9,69 +10,77 @@ import digitalImg from "../pictures/digital.jpg";
 import registrationImg from "../pictures/registration.jpg";
 import brandingImg from "../pictures/branding.jpg";
 import giftImg from "../pictures/gift.jpg";
-import soft from "../pictures/soft.jpg";
+import automationImg from "../pictures/Ai.jpg";
 
-/* ================= 1. CORE DIGITAL SOLUTIONS ================= */
 const coreServices = [
   {
-    id: "business-systems",
-    title: "Business Websites  Applications",
+    id: "Digital Product Engineering",
+    title: "Digital Product Engineering ",
+        h4: "Build websites, apps, SaaS, software",
+
     tag: "Systems Engineering",
-    desc: "We architect high-performance digital infrastructure designed for scale. Our solutions bridge the gap between complex business logic and intuitive user experiences.",
+    desc: "We build powerful digital products tailored to your business needs. From websites and mobile apps to enterprise software and SaaS platforms, our solutions are designed to improve efficiency and long-term growth.",
     image: softwareImg,
-    items: ["Progressive Web Apps (PWA)", "Custom CRM & ERP Dashboards", "Cross-Platform Mobile Solutions", "Enterprise System Software", "Legacy System Modernization"]
+    icon: <FiCpu />,
+    items: ["Business Websites", "Mobile Applications", "Web Applications", "SaaS Platforms", "Custom Software", "CRM & ERP Systems"]
   },
   {
-    id: "growth-systems",
-    title: " Lead Generation Systems",
+    id: "Growth & Customer Acquisition",
+    title: "Growth & Customer Acquisition ",
+            h4: "Marketing + Lead Generation",
+
     tag: "Growth Logic",
-    desc: "Transforming traffic into measurable revenue. We engineer data-driven sales funnels and automated communication loops that ensure no lead is left behind.",
+    desc: "Generate consistent leads and grow your customer base through data-driven marketing. We combine creativity and performance marketing to turn visitors into paying customers.",
     image: digitalImg,
-    items: ["High-Conversion UI/UX Design", "Automated Sales Funnel Architecture", "WhatsApp Business API Integration", "Deep CRM Synchronization", "Multi-Channel Conversion Tracking"]
+    icon: <FiTarget />,
+    items: ["SEO Services", "Social Media Marketing", "Performance Ads", "Lead Generation Funnels", "WhatsApp Marketing", "Marketing Automation"]
   },
   {
-    id: "automation-ai",
-    title: " Marketing Automation",
+    id: "Intelligent Automation Systems",
+    title: "Intelligent Automation Systems",
+            h4: "AI + Automation",
+
     tag: "Neural Scale",
-    desc: "Harness the power of AI to automate business expansion. We deploy sophisticated algorithms and automated workflows that optimize your reach 24/7.",
-    image: brandingImg,
-    items: ["AI-Powered Conversational Chatbots", "Automated Campaign Orchestration", "Predictive Performance Analytics", "Dynamic Remarketing Systems", "Algorithm-Based Ad Optimization"]
-  },
-  {
-    id: "it-services",
-    title: " Software Development",
-    tag: "Full-Stack Ops",
-    desc: "Complete development solutions engineered for high performance and scalability. We architect custom digital products that bridge the gap between complex logic and seamless user experience.",
-    image: soft, // Variable fixed here
-    items: [
-      "Enterprise Website Development",
-      "High-Performance Web Applications",
-      "Cross-Platform Mobile Solutions",
-      "Custom System & Desktop Apps",
-      "Scalable Software Infrastructure"
-    ]
+    desc: "Automate repetitive tasks and deliver better customer experiences using intelligent automation systems powered by modern AI technologies.",
+    image: automationImg,
+    icon: <FiZap />,
+    items: ["AI Chatbots", "WhatsApp Automation", "Workflow Automation", "Customer Support Systems", "Lead Management", "BI Dashboards"]
   }
 ];
 
-/* ================= 2. EXTENDED BUSINESS ECOSYSTEM ================= */
+const launchSolutions = [
+  {
+
+    title: "Startup & Business Launch",
+            h4: "Startup / Business Building",
+
+    tag: "Idea To Business",
+    image: registrationImg,
+    desc: "Have a business or app idea but don't know where to start? We help entrepreneurs transform ideas into successful businesses.",
+    items: ["Business Strategy & Planning", "Company Registration Support", "Brand Identity & Logo Design", "Product Roadmapping", "MVP Development", "SaaS Launch Support"]
+  }
+];
 const extendedServices = [
   { 
+    id: "registration",
     category: "Corporate Compliance", 
-    tag: "Regulatory", // Added tag
+    tag: "Regulatory", 
     image: registrationImg,
     desc: "Navigating the legal landscape to ensure your business foundation is secure and compliant.",
     items: ["Private Ltd & LLP Incorporation", "GST & MSME Regulatory Filing", "FSSAI & Statutory Licensing"] 
   },
   { 
+    id: "branding",
     category: "Creative Branding", 
-    tag: "Identity", // Added tag
+    tag: "Identity", 
     image: brandingImg,
     desc: "Defining your brand's visual DNA. We engineer cohesive identities that command attention.",
     items: ["Custom Logo & Visual Systems", "Brand Positioning & Strategy", "High-Impact Graphic Design"] 
   },
   { 
+    id: "gifting",
     category: "Corporate Assets", 
-    tag: "Merchandise", // Added tag
+    tag: "Merchandise", 
     image: giftImg,
     desc: "Extending your professional reach through premium physical touchpoints and curated brand assets.",
     items: ["Luxury Corporate Gifting", "Custom Branded Merchandise", "Premium Executive Hampers"] 
@@ -81,247 +90,329 @@ const extendedServices = [
 export default function Services() {
   return (
     <section className="relative py-16 md:py-32 bg-white overflow-hidden font-sans">
-      <div className="absolute inset-0 pointer-events-none opacity-[0.04]" 
-           style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '100px 100px' }} />
+      {/* Background Grid Pattern */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.03]" 
+           style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
 
       <div className="max-w-[1400px] mx-auto px-6 relative z-10">
         
-       {/* SECTION HEADER */}
-<header className="mb-16 sm:mb-20 md:mb-32 border-l-4 md:border-l-[12px] border-blue-600 pl-5 sm:pl-8 md:pl-12">
+   {/* --- HERO HEADER (PREMIUM STANDARD CORPORATE) --- */}
+<header className="relative mb-6 md:mb-20 pt-3 md:pt-8 border-b border-slate-100 pb-6 md:pb-12 font-sans">
   <ScrollReveal variant="up">
     
-    {/* Tagline Container */}
-    <div className="flex items-center gap-3 mb-6">
-      <span className="w-8 md:w-16 h-[2px] bg-blue-600 shrink-0"></span>
-      <span className="font-mono text-[9px] md:text-xs font-bold uppercase tracking-[0.3em] md:tracking-[0.6em] text-slate-400 whitespace-nowrap">
-        Capabilities / 2026
-      </span>
+    {/* Top Corporate Context Bar — High-Density Layout with Minimal Margin */}
+    <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200/60 pb-3 mb-5 md:mb-10">
+      <div className="flex items-center gap-2 md:gap-3">
+        <div className="flex gap-1 shrink-0">
+          <span className="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+          <span className="w-1.5 h-1.5 rounded-full bg-slate-200"></span>
+        </div>
+        <span className="font-mono text-[10px] md:text-xs font-bold uppercase tracking-[0.15em] md:tracking-[0.25em] text-white-900">
+          FKode Solutions
+        </span>
+        <span className="text-slate-300 hidden sm:inline">|</span>
+        <span className="font-mono text-[11px] text-slate-400 uppercase tracking-wider hidden sm:inline">
+          Enterprise Infrastructure
+        </span>
+      </div>
+      
+      
     </div>
 
-    {/* Main Title - Mobile Optimization */}
-    <h2 className="
-      text-[2.6rem] 
-      xs:text-[3rem] 
-      sm:text-6xl 
-      md:text-7xl 
-      lg:text-9xl 
-      font-black uppercase tracking-tighter 
-      leading-[0.9] md:leading-[0.85] 
-      text-slate-950">
-      Enterprise <br className="hidden xs:block" /> 
-      Fkode <br />
-      <span className="text-blue-600 block mt-1">Solutions</span>
-    </h2>
+    {/* Main Corporate Typography Grid — Clean Flow & No Dead Spaces */}
+    <div className="grid lg:grid-cols-12 gap-5 md:gap-10 items-start">
+      
+      {/* Left Side Group: Heading, Subheading AND the Action Button right beneath */}
+      <div className="lg:col-span-7 space-y-4 md:space-y-6">
+        <div className="space-y-2 md:space-y-4">
+          <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight text-slate-950 leading-[1.1] md:leading-[1.05]">
+            FKode Business<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-500">
+              Solutions.
+            </span>
+          </h2>
+          <h4 className="text-blue-600 font-mono text-[11px] sm:text-sm md:text-base font-bold uppercase tracking-[0.12em] leading-snug">
+            // Complete Business Growth Ecosystem Under One Roof
+          </h4>
+        </div>
 
-    {/* Description - Better readability on small screens */}
-    <p className="
-      mt-8 md:mt-12 
-      text-slate-500 
-      max-w-[280px] sm:max-w-md md:max-w-2xl 
-      text-[13px] sm:text-base md:text-xl 
-      font-medium leading-relaxed md:leading-loose">
-      A unified ecosystem combining <span className="text-slate-900">cutting-edge software engineering</span>, 
-      performance marketing, and corporate compliance under one strategic roof.
-    </p>
+        {/* Right Side Group: Compact Context (No margins or blank lines) */}
+      <div className="lg:col-span-5 lg:pt-1">
+        <div className="pl-0 lg:pl-5 border-l-0 lg:border-l-2 border-slate-200">
+          <p className="text-slate-500 text-sm md:text-base lg:text-lg font-normal leading-relaxed text-justify">
+            Complete business infrastructure engineered under a single tactical framework. We help enterprises{" "}
+            <span className="text-slate-950 font-semibold underline decoration-blue-600 decoration-2 underline-offset-4">
+              launch, grow, and automate
+            </span>{" "}
+            core workflows through technology-driven discipline.
+          </p>
+          
+        </div>
+      </div>
+
+        {/* Refined Corporate Action Button — Perfectly aligned with zero vertical leak */}
+        <div className="pt-1 flex w-full sm:w-auto">
+          <Link 
+            to="/contact" 
+            className="group flex items-center justify-between gap-4 w-full sm:w-auto bg-slate-950 hover:bg-blue-600 text-white pl-5 pr-4 py-3 md:py-3.5 rounded-xl shadow-md transition-all duration-300 hover:-translate-y-0.5"
+          >
+            <span className="font-sans font-bold uppercase tracking-[0.15em] text-xs whitespace-nowrap">
+              Start Project
+            </span>
+            <div className="w-7 h-7 bg-white/10 group-hover:bg-white text-white group-hover:text-slate-950 rounded-lg flex items-center justify-center transition-all duration-300 shrink-0">
+              <FiArrowUpRight size={14} className="group-hover:rotate-45 transition-transform duration-300" />
+            </div>
+          </Link>
+        </div>
+      </div>
+
+      
+
+    </div>
 
   </ScrollReveal>
 </header>
-
-        <div className="mb-20">
-          <h3 className="text-5xl md:text-6xl font-black uppercase tracking-tighter text-slate-900">
-            COre Services.
-          </h3>
-        </div>
-
         {/* SECTION A: CORE SERVICES */}
-        <div className="space-y-32 md:space-y-64 mb-64">
-          {coreServices.map((service, i) => (
-            <div key={service.id} className="grid lg:grid-cols-12 gap-10 md:gap-20 items-center">
-              <div className={`lg:col-span-6 relative ${i % 2 !== 0 ? "lg:order-last" : ""} flex justify-center`}>
-                <ScrollReveal variant={i % 2 === 0 ? "left" : "right"} className="w-full">
-                  <div className="relative group w-full">
-                    <div className="relative overflow-hidden shadow-2xl rounded-2xl md:rounded-none">
-                      <motion.img 
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.6 }}
-                        src={service.image} 
-                        alt={service.title} 
-                        className="w-full h-[350px] md:h-[600px] object-cover transition-all duration-700" 
-                      />
-                      <div className="absolute bottom-0 left-0 bg-blue-600 text-white p-4 md:p-8">
-                        <FiCpu className="text-2xl md:text-4xl animate-pulse" />
-                      </div>
-                    </div>
-                    <div className="hidden md:block absolute -z-10 top-10 -right-10 w-full h-full border border-slate-200" />
-                  </div>
-                </ScrollReveal>
-              </div>
-
-              <div className="lg:col-span-6">
-                <ScrollReveal variant="up">
-                  <span className="text-blue-600 font-mono text-xs font-bold uppercase tracking-widest mb-4 block italic">// {service.tag}</span>
-                  <h3 className="text-4xl md:text-5xl font-black uppercase mb-6 leading-tight text-slate-900">{service.title}</h3>
-                  <p className="text-slate-500 text-lg mb-10 leading-relaxed italic">{service.desc}</p>
-                  
-                  <div className="grid grid-cols-1 gap-4 mb-12 border-t border-slate-100 pt-8">
-                    {service.items.map((item, idx) => (
-                      <div key={idx} className="flex items-center gap-4 py-2 group hover:translate-x-2 transition-transform duration-300">
-                        <div className="w-1.5 h-1.5 bg-blue-600"></div>
-                        <span className="font-bold text-[10px] uppercase tracking-[0.2em] text-slate-800">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <Link to={`/services/${service.id}`} className="inline-flex items-center gap-6 group w-full md:w-auto">
-                    <span className="h-14 px-10 bg-slate-950 text-white flex items-center font-bold text-xs uppercase tracking-widest group-hover:bg-blue-600 transition-all">
-                      Request Technical Spec
-                    </span>
-                    <div className="w-14 h-14 border border-slate-200 flex items-center justify-center group-hover:border-blue-600 group-hover:text-blue-600 transition-all">
-                      <FiArrowUpRight className="text-xl group-hover:rotate-45 transition-transform" />
-                    </div>
-                  </Link>
-                </ScrollReveal>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* SECTION B: EXTENDED BUSINESS ECOSYSTEM */}
         <div className="mb-32">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-6">
-            <div>
-              <h3 className="text-5xl md:text-6xl font-black uppercase tracking-tighter text-slate-900">
-                Extended Services.
-              </h3>
+            <div className="flex items-center gap-4 mb-16">
+                <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">Core Services</h3>
+                <div className="h-[1px] flex-1 bg-slate-200"></div>
             </div>
-            <div className="hidden md:block h-[1px] flex-1 bg-slate-200 mx-10 mb-4"></div>
-          </div>
 
-          <div className="grid lg:grid-cols-3 gap-0 border border-slate-200 divide-y lg:divide-y-0 lg:divide-x divide-slate-200">
-            {extendedServices.map((ext, i) => (
-              <div key={i} className="group relative bg-white p-10 md:p-16 overflow-hidden transition-all duration-700 hover:bg-slate-950">
-                <div className="absolute top-10 right-10 flex flex-col items-center">
-                    <span className="font-mono text-[10px] text-slate-300 group-hover:text-blue-500 transition-colors uppercase vertical-text tracking-widest">Service Unit</span>
-                    <span className="text-4xl font-black text-slate-100 group-hover:text-white/10 transition-colors">0{i + 1}</span>
+            <div className="space-y-24 md:space-y-48">
+            {coreServices.map((service, i) => (
+                <div key={service.id} className="grid lg:grid-cols-12 gap-12 items-center">
+                <div className={`lg:col-span-7 ${i % 2 !== 0 ? "lg:order-last" : ""}`}>
+                    <ScrollReveal variant="up">
+                    <div className="relative group overflow-hidden rounded-3xl">
+                        <motion.img 
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.8 }}
+                            src={service.image} 
+                            className="w-full h-[400px] md:h-[550px] object-cover w-full h-auto object-contain md:object-cover" 
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent flex items-end p-8 md:p-12">
+                            <div className="flex items-center gap-6">
+                                <div className="w-16 h-16 bg-blue-600 flex items-center justify-center text-white text-3xl">
+                                    {service.icon}
+                                </div>
+                                <span className="text-white font-mono text-sm tracking-[0.3em] uppercase opacity-60 italic">{service.tag}</span>
+                            </div>
+                        </div>
+                    </div>
+                    </ScrollReveal>
                 </div>
 
-                <span className="inline-block px-3 py-1 border border-blue-600 text-blue-600 font-mono text-[10px] font-bold uppercase tracking-widest mb-10 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                  {ext.tag}
-                </span>
+                <div className="lg:col-span-5">
+                    <ScrollReveal variant="up">
+                   
+                    <h3 className="text-3xl md:text-5xl font-black uppercase mb-6 text-slate-900 leading-tight">{service.title}</h3>
+                                       <h4 className="text-blue-500 text-lg mb-8 leading-relaxed">{service.h4}</h4>
 
-                <div className="relative z-10">
-                  <h4 className="text-3xl font-black uppercase mb-6 leading-none tracking-tighter text-slate-900 group-hover:text-white transition-colors">
-                    {ext.category.split(' ')[0]} <br/> 
-                    <span className="text-blue-600">{ext.category.split(' ')[1]}</span>
-                  </h4>
-                  <p className="text-slate-500 group-hover:text-slate-400 mb-10 text-sm leading-relaxed font-medium transition-colors">
-                    {ext.desc}
-                  </p>
-                  <ul className="space-y-5 mb-10">
-                    {ext.items.map((li, j) => (
-                      <li key={j} className="flex items-center gap-4 group/item">
-                        <div className="w-1 h-1 bg-blue-600 group-hover:w-4 transition-all duration-500"></div>
-                        <span className="text-[10px] font-bold text-slate-700 group-hover:text-slate-300 uppercase tracking-[0.2em] transition-colors">
-                          {li}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                    <p className="text-slate-500 text-lg mb-8 leading-relaxed">{service.desc}</p>
+                    
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                        {service.items.map((item, idx) => (
+                        <div key={idx} className="flex items-center gap-3 group">
+                            <div className="w-2 h-2 bg-blue-600 rounded-full group-hover:scale-150 transition-transform"></div>
+                            <span className="text-xs font-bold uppercase tracking-widest text-slate-700">{item}</span>
+                        </div>
+                        ))}
+                    </div>
 
-                <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-20 transition-all duration-1000 scale-150 group-hover:scale-100">
-                   <img src={ext.image} className="w-full h-full object-cover grayscale" alt="Service" />
-                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent"></div>
+                    <Link to={`/services/${service.id}`} className="inline-flex items-center gap-4 font-black uppercase tracking-[0.2em] text-sm group text-blue-600">
+                        Explore More <FiArrowUpRight className="group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform" />
+                    </Link>
+                    </ScrollReveal>
                 </div>
-                <div className="absolute bottom-0 right-0 w-12 h-12 border-r-2 border-b-2 border-slate-100 group-hover:border-blue-600 transition-all duration-500"></div>
-              </div>
+                </div>
             ))}
-          </div>
+            </div>
         </div>
 
-       {/* ONE-TEAM LOGIC & WORKFLOW */}
-<div className="mb-32 md:mb-64 bg-slate-950 p-8 md:p-32 text-white relative overflow-hidden">
-  <div className="relative z-10">
-    
-    {/* Part 1: The Problem & Solution */}
-    <div className="grid lg:grid-cols-2 gap-12 md:gap-20 mb-24">
-      <div>
-        <h3 className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9] mb-8">
-          Stop Managing <br /> <span className="text-blue-500">Chaos.</span>
-        </h3>
-        <p className="text-slate-400 text-lg md:text-xl font-light leading-relaxed max-w-xl">
-          Why manage 5+ vendors for website, marketing, design, and legal? 
-          Fragmented focus leads to delays. We eliminate that friction.
-        </p>
-        
-        {/* Vendor vs FKode Highlight */}
-        <div className="mt-10 flex flex-wrap gap-3">
-          {['Web', 'Marketing', 'Design', 'Legal', 'Software'].map((item) => (
-            <span key={item} className="px-3 py-1 border border-white/10 text-slate-500 text-[10px] uppercase font-bold line-through">
-              {item} Vendor
-            </span>
-          ))}
-          <span className="px-4 py-1 bg-blue-600 text-white text-[25px] uppercase font-black animate-pulse">
-            FKode: One Team. One Strategy.
+        {/* SECTION B: STARTUP SOLUTIONS (The Unique Feature) */}
+        <div className="py-24 bg-blue-50 rounded-[3rem] px-8 md:px-20 mb-32 relative overflow-hidden">
+             <div className="absolute top-0 right-0 p-10 opacity-10">
+                <FaRocket size={200} className="text-blue-800" />
+             </div>
+             
+             {launchSolutions.map((sol, index) => (
+                 <div key={index} className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <span className="px-4 py-1 bg-blue-600 text-white font-mono text-[10px] font-bold uppercase tracking-widest mb-6 inline-block">
+                            {sol.tag}
+                        </span>
+                        <h3 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 text-slate-950">
+                            Startup & Business <br/> <span className="text-blue-600">Launch Solutions</span>
+                        </h3>
+                        <p className="text-slate-600 text-lg md:text-xl mb-10 leading-relaxed italic">
+                            {sol.desc}
+                        </p>
+                        <div className="grid sm:grid-cols-2 gap-y-4">
+                            {sol.items.map((li, j) => (
+                                <div key={j} className="flex items-center gap-3">
+                                    <div className="w-5 h-[1px] bg-blue-600"></div>
+                                    <span className="text-[11px] font-bold text-slate-800 uppercase tracking-wider">{li}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="relative">
+                        <img src={sol.image} alt="Startup" className="rounded-2xl shadow-2xl  transition-all duration-700" />
+                        <div className="absolute -bottom-6 -left-6 bg-white p-8 shadow-xl hidden md:block max-w-xs">
+                            <p className="text-xs font-bold uppercase tracking-widest text-blue-600 mb-2">Long-term Partner</p>
+                            <p className="text-slate-500 text-sm italic">"We become your extended team for software and growth."</p>
+                        </div>
+                    </div>
+                     <Link
+  to="/servicesStartup"
+  className="inline-flex items-center gap-4 font-black uppercase tracking-[0.2em] text-sm group text-blue-600"
+>
+  Explore More
+  <FiArrowUpRight className="group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform" />
+</Link>
+                 </div>
+                 
+             ))}
+        </div>
+
+
+{/* SECTION B: EXTENDED BUSINESS ECOSYSTEM */}
+<div className="mb-16 md:mb-32 pt-6">
+  {/* Header Title Layer */}
+  <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-16 gap-4">
+    <div>
+      <h3 className="text-2xl sm:text-4xl md:text-5xl font-black uppercase tracking-tighter text-slate-900">
+        Extended Services.
+      </h3>
+    </div>
+    <div className="hidden md:block h-[1px] flex-1 bg-slate-200 mx-6 md:mx-10 mb-3"></div>
+  </div>
+
+  {/* Main High-Density Responsive Grid */}
+  <div className="grid lg:grid-cols-3 gap-0 border border-slate-200 divide-y lg:divide-y-0 lg:divide-x divide-slate-200 rounded-xl overflow-hidden">
+    {extendedServices.map((ext, i) => (
+      <div 
+        key={i} 
+        className="group relative bg-white p-6 sm:p-8 md:p-12 xl:p-14 overflow-hidden transition-all duration-700 hover:bg-slate-950 flex flex-col justify-between min-h-[420px]"
+      >
+        {/* Top Absolute Context Metadata */}
+        <div className="absolute top-6 right-6 sm:top-10 sm:right-10 flex flex-col items-center select-none">
+          <span className="font-mono text-[9px] text-slate-300 group-hover:text-blue-500 transition-colors uppercase vertical-text tracking-widest hidden sm:block">
+            Service Unit
+          </span>
+          <span className="text-2xl sm:text-4xl font-black text-slate-100 group-hover:text-white/10 transition-colors leading-none mt-1">
+            0{i + 1}
           </span>
         </div>
-      </div>
 
-      <div className="flex flex-col justify-center space-y-8">
-        {[
-          { t: "Unified Strategy", d: "One cohesive roadmap for tech and growth." },
-          { t: "Absolute Accountability", d: "A single point of contact for all operations." },
-          { t: "System Integration", d: "Zero friction between business tools and legalities." }
-        ].map((adv, i) => (
-          <div key={i} className="flex gap-6 items-start border-l-2 border-blue-600 pl-8 group">
-            <div>
-              <h4 className="font-bold uppercase tracking-widest mb-2 group-hover:text-blue-500 transition-colors">{adv.t}</h4>
-              <p className="text-sm text-slate-500">{adv.d}</p>
-            </div>
+        <div>
+          {/* Tag Identifier Badge */}
+          <span className="inline-block px-2.5 py-1 border border-blue-600 text-blue-600 font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-widest mb-6 sm:mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all">
+            {ext.tag}
+          </span>
+
+          {/* Core Content Body Stack */}
+          <div className="relative z-10 space-y-4">
+            <h4 className="text-xl sm:text-2xl md:text-3xl font-black uppercase leading-tight tracking-tight text-slate-900 group-hover:text-white transition-colors">
+              {ext.category.split(' ')[0]} <br/> 
+              <span className="text-blue-600">{ext.category.split(' ').slice(1).join(' ')}</span>
+            </h4>
+            
+            <p className="text-slate-500 group-hover:text-slate-400 text-xs sm:text-sm leading-relaxed text-justify max-w-sm transition-colors">
+              {ext.desc}
+            </p>
+            
+            {/* Structured Metric Row Items */}
+            <ul className="space-y-3 pt-2">
+              {ext.items.map((li, j) => (
+                <li key={j} className="flex items-start gap-3 group/item">
+                  <div className="w-1 h-1 bg-blue-600 group-hover/item:w-3 transition-all duration-300 mt-2 shrink-0"></div>
+                  <span className="text-[9px] sm:text-[10px] font-bold text-slate-700 group-hover:text-slate-300 uppercase tracking-[0.15em] transition-colors leading-relaxed">
+                    {li}
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
 
-    {/* Part 2: 🚀 HOW WE WORK (Workflow) */}
-    <div className="pt-20 border-t border-white/10">
-      <div className="mb-16">
-        <span className="text-blue-500 font-mono text-xs font-black tracking-[0.5em] block mb-4">// EXECUTION ENGINE</span>
-        <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">How We <span className="italic text-slate-700">Work.</span></h3>
-      </div>
+        {/* ================= INDIVIDUAL EXPLORE BUTTON LINK (PER CARD) ================= */}
+        <div className="relative z-10 pt-8 sm:pt-10 mt-auto">
+          {/* Note: ext.id is dynamic now, it routes exactly to that unique service page */}
+          <Link 
+            to={`/services/${ext.id}`} 
+            className="inline-flex items-center gap-3 font-sans font-bold uppercase tracking-[0.2em] text-xs text-blue-600 group-hover:text-white transition-colors focus:outline-none"
+          >
+            <span>Explore More</span>
+            <FiArrowUpRight className="transform group-hover:translate-x-1.5 group-hover:-translate-y-1.5 transition-transform duration-300" size={14} />
+          </Link>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {[
-          { step: "01", title: "Understand", desc: "Deep dive into your business DNA and market landscape." },
-          { step: "02", title: "Architect", desc: "Building your custom digital systems and legal foundation." },
-          { step: "03", title: "Launch", desc: "Deploying high-performance assets to the global market." },
-          { step: "04", title: "Scale", desc: "Hyper-growth through AI-driven automation and systems." }
-        ].map((item, idx) => (
-          <div key={idx} className="relative p-8 border border-white/5 hover:border-blue-600/50 transition-all group bg-white/[0.02]">
-            <span className="text-5xl font-black text-white/5 group-hover:text-blue-600/20 transition-colors absolute top-4 right-6">
-              {item.step}
-            </span>
-            <div className="relative z-10">
-              <h4 className="text-xl font-black uppercase mb-4 tracking-tight">{item.title}</h4>
-              <p className="text-sm text-slate-500 leading-relaxed italic">
-                {item.desc}
-              </p>
-            </div>
-            {/* Connector line for Desktop */}
-            {idx < 3 && <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-[1px] bg-blue-600/30 z-0"></div>}
-          </div>
-        ))}
-      </div>
-    </div>
+        {/* Ambient Hover Graphic Vector Asset Layers */}
+        <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-15 transition-all duration-1000 scale-120 group-hover:scale-100 pointer-events-none">
+          <img src={ext.image} className="w-full h-full object-cover grayscale" alt="Corporate Service Backdrop" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent"></div>
+        </div>
 
+        {/* Structural Edge Border Feature */}
+        <div className="absolute bottom-0 right-0 w-8 h-8 border-r border-b border-slate-100 group-hover:border-blue-600 transition-all duration-300"></div>
+      </div>
+    ))}
   </div>
-  
-  {/* Background Branding */}
-<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[12rem] md:text-[20rem] font-black text-white/[0.02] pointer-events-none uppercase select-none">
-  FKode
-</div>
 </div>
 
+
+        
+        {/* --- FINAL CTA (PREMIUM SPLIT GRID SYSTEM) --- */}
+        <div className="relative mt-20 md:mt-32 border-t border-slate-200 pt-16 pb-20 font-sans">
+          
+          {/* Subtle Accent Layer */}
+          <div className="absolute top-0 left-0 w-24 h-[3px] bg-blue-600"></div>
+
+          <div className="grid lg:grid-cols-12 gap-8 items-start">
+            
+            {/* Left Side: Editorial Styled Heading */}
+            <div className="lg:col-span-7">
+              <span className="font-mono text-[11px] font-black uppercase tracking-[0.3em] text-blue-600 block mb-4">
+                // NEXT LEVEL EXECUTION
+              </span>
+              <h3 className="text-4xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight text-slate-950 leading-[1.05]">
+                Ready to Scale <br />
+                Your Entire <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Enterprise?</span>
+              </h3>
+            </div>
+
+            {/* Right Side: Clean Narrative & Interaction Area */}
+            <div className="lg:col-span-5 lg:pt-8 flex flex-col justify-between h-full">
+              <p className="text-slate-500 text-sm sm:text-base md:text-lg font-normal leading-relaxed mb-10 max-w-md">
+                Integrate into the FKode infrastructure. We construct and manage the underlying technology systems, allowing your core leadership to focus entirely on the vision.
+              </p>
+
+              {/* Minimalist Yet High-Impact Kinetic Button */}
+              <div className="border-t border-slate-100 pt-8">
+                <Link 
+                  to="/contact" 
+                  className="group inline-flex items-center justify-between gap-8 bg-slate-950 hover:bg-blue-600 text-white pl-6 pr-4 py-4 rounded-2xl shadow-xl shadow-slate-950/10 transition-all duration-500 w-full sm:w-auto"
+                >
+                  <span className="font-sans font-black uppercase tracking-[0.2em] text-xs">
+                    Initiate Consultation
+                  </span>
+                  <div className="w-8 h-8 bg-white/10 group-hover:bg-white text-white group-hover:text-slate-950 rounded-xl flex items-center justify-center transition-all duration-500 group-hover:rotate-45 shrink-0">
+                    <FiArrowUpRight size={18} />
+                  </div>
+                </Link>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Elegant Kinetic Typography Footer Accent */}
+          <div className="mt-16 pt-6 border-b border-slate-100 flex items-center justify-between font-mono text-[10px] text-slate-400 uppercase tracking-widest">
+            <span>[ FKODE ENTERPRISE ECOSYSTEM ]</span>
+            <span className="hidden sm:inline">ALL SYSTEMS OPERATIONAL 2026</span>
+          </div>
+        </div>
 
       </div>
     </section>

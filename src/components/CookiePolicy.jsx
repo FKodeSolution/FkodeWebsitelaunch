@@ -139,8 +139,8 @@ export default function CookiePolicy() {
                     </p>
                   </div>
                   <div className="flex flex-col gap-4 w-full md:w-auto">
-                    <a href="mailto:fkode.careers@gmail.com" className="flex items-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-700 transition-all rounded-2xl font-bold text-center justify-center shadow-lg shadow-blue-900/40">
-                      <FiMail /> fkode.careers@gmail.com
+                    <a href="mailto:support.fkode@gmail.com" className="flex items-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-700 transition-all rounded-2xl font-bold text-center justify-center shadow-lg shadow-blue-900/40">
+                      <FiMail /> support.fkode@gmail.com
                     </a>
                     <div className="flex items-center gap-2 text-slate-500 text-xs justify-center uppercase tracking-widest">
                       <FiCheckCircle className="text-green-500" /> Responses within 24 Hours

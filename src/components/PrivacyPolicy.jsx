@@ -118,7 +118,7 @@ export default function PrivacyPolicy() {
   
   {/* ===== EMAIL ===== */}
   <a
-    href="mailto:fkode.careers@gmail.com"
+    href="mailto:support.fkode@gmail.com"
     className="flex-1 p-8 rounded-3xl bg-white border border-slate-200 hover:border-blue-300 transition-all group cursor-pointer"
   >
     <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -128,13 +128,13 @@ export default function PrivacyPolicy() {
       Email us
     </p>
     <p className="text-slate-900 font-bold text-lg">
-      fkode.careers@gmail.com
+      support.fkode@gmail.com
     </p>
   </a>
 
   {/* ===== PHONE ===== */}
   <a
-    href="tel:+919150282859"
+    href="tel:+918248798337"
     className="flex-1 p-8 rounded-3xl bg-white border border-slate-200 hover:border-blue-300 transition-all group cursor-pointer"
   >
     <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -144,7 +144,10 @@ export default function PrivacyPolicy() {
       Call Support
     </p>
     <p className="text-slate-900 font-bold text-lg">
-      +91 91502 82859
+      +91 82487 98337
+    </p>
+     <p className="text-slate-900 font-bold text-lg">
+      +44 3171 2433
     </p>
   </a>
 

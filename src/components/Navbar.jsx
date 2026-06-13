@@ -98,7 +98,7 @@ export default function Navbar() {
                         <h3 className="text-sm font-black uppercase tracking-[0.3em] text-slate-400">Core Services</h3>
                       </div>
                       <div className="space-y-2">
-                        {["business-systems", "growth-systems", "automation-ai"].map((id) => (
+                        {["Digital Product Engineering", "Growth & Customer Acquisition", "Intelligent Automation Systems","Startup & Business Launch Solutions"].map((id) => (
                           <button
                             key={id}
                             onClick={() => goToService(id)}
@@ -122,7 +122,7 @@ export default function Navbar() {
                         <h3 className="text-sm font-black uppercase tracking-[0.3em] text-slate-400">Extended Services</h3>
                       </div>
                       <div className="space-y-2">
-                        {[ "branding", "registration","gifting"].map((id) => (
+                        {[  "registration","branding","gifting"].map((id) => (
                           <button
                             key={id}
                             onClick={() => goToService(id)}
@@ -148,6 +148,7 @@ export default function Navbar() {
           </div>
 
           <NavLink to="/why-fkode" className={linkStyles}>Why FKode</NavLink>
+          
           <NavLink to="/industries" className={linkStyles}>Industries</NavLink>
           <NavLink to="/career" className={linkStyles}>Career</NavLink>
                     <NavLink to="/package" className={linkStyles}>Package</NavLink>
@@ -204,27 +205,40 @@ export default function Navbar() {
                 exit={{ height: 0, opacity: 0 }}
                 className="mt-6 flex flex-col space-y-8 overflow-hidden"
               >
-                {/* CORE SERVICES GROUP */}
-                <div className="pl-4 border-l-2 border-blue-600">
-                  <p className="text-[10px] font-bold text-blue-600 uppercase tracking-[0.3em] mb-4">Core Technologies</p>
-                  <div className="flex flex-col space-y-4">
-                    {["business-systems", "automation-ai", "software"].map((key) => (
-                      <button 
-                        key={key} 
-                        onClick={() => { goToService(key); setIsMobileMenuOpen(false); }} 
-                        className="text-left text-lg font-black text-slate-900 uppercase tracking-widest"
-                      >
-                        {key.replace(/-/g, " ")}
-                      </button>
-                    ))}
-                  </div>
-                </div>
+               {/* CORE SERVICES GROUP */}
+<div className="pl-4 border-l-2 border-blue-600">
+  <p className="text-[10px] font-bold text-blue-600 uppercase tracking-[0.3em] mb-4">
+    Core Technologies
+  </p>
+  <div className="flex flex-col space-y-4">
+    
+    {["Digital Product Engineering", "Growth & Customer Acquisition", "Intelligent Automation Systems", "Startup & Business Launch Solutions"].map((key) => (
+      <button 
+        key={key} 
+        onClick={() => { 
+          if (key === "Startup & Business Launch Solutions") {
+            // Unbypass data context error by absolute layout page pushing
+            navigate("/servicesStartup"); 
+          } else {
+            // Fallback for native array context keys mapping
+            goToService(key); 
+          }
+          setIsMobileMenuOpen(false); 
+        }} 
+        className="text-left text-lg font-black text-slate-900 uppercase tracking-widest hover:text-blue-600 transition-colors duration-200"
+      >
+        {key.replace(/-/g, " ")}
+      </button>
+    ))}
+
+  </div>
+</div>
 
                 {/* EXTENDED SERVICES GROUP */}
                 <div className="pl-4 border-l-2 border-slate-200">
                   <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mb-4">Extended Solutions</p>
                   <div className="flex flex-col space-y-4">
-                    {["branding", "registration", "marketing", "gifting"].map((key) => (
+                    {["registration",  "branding", "gifting"].map((key) => (
                       <button 
                         key={key} 
                         onClick={() => { goToService(key); setIsMobileMenuOpen(false); }} 

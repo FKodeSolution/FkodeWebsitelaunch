@@ -11,6 +11,7 @@ import surthibai from "../pictures/surthibai.jpeg";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 /* ================= BACKGROUND ================= */
 function ExecutiveBackground() {
   return (
@@ -36,6 +37,8 @@ export default function FKodeCorporateHero() {
 
     return () => ctx.revert();
   }, []);
+
+  
 
   return (
     <div ref={containerRef} className="relative min-h-screen font-sans text-slate-900 overflow-hidden">
@@ -146,6 +149,7 @@ export default function FKodeCorporateHero() {
       ruthi,
       tiptop,
       surthibai
+      
     ].map((img, i) => (
       <img
         key={i}

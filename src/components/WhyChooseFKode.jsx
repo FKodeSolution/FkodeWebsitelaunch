@@ -82,7 +82,7 @@ export default function FKodeStory() {
           
           {/* Main Visual Block */}
           <div className="lg:col-span-7 relative group overflow-hidden rounded-[2rem] h-[500px] shadow-2xl">
-            <img src={servicesImg} alt="Technical Team" className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" />
+            <img src={servicesImg} alt="Technical Team" className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 w-full h-auto object-contain md:object-cover " />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent p-10 flex flex-col justify-end">
                <h3 className="text-white text-3xl font-black uppercase tracking-tighter">Mission Critical <br /> System Delivery</h3>
             </div>

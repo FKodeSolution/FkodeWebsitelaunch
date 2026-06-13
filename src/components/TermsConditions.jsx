@@ -125,7 +125,7 @@ export default function LightCorporateTerms() {
               </div>
 
               <a 
-                href="mailto:fkode.careers@gmail.com"
+                href="mailto:support.fkode@gmail.com"
                 className="relative z-10 bg-white text-blue-600 px-8 py-4 rounded-2xl font-bold flex items-center gap-3 hover:bg-slate-50 transition-all shadow-xl shadow-blue-900/20"
               >
                 Email Support <FiArrowRight />

@@ -18,6 +18,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import CookiePolicy from "./components/CookiePolicy";
 import CareerPage from "./components/CareerPage"; 
 import Package from "./components/Package";
+import  ServicesStartup  from "./components/ServicesStartup";
 
 
 
@@ -52,6 +53,7 @@ function App() {
                 <Route path="/package" element={<Package />} />
 
         <Route path="/contact" element={<Contact />} />
+        <Route path="/servicesStartup" element={<ServicesStartup/>} />                                                                                                                                                                                                                                                                                                            
         <Route path="/TermsConditions" element={<TermsConditions />} />
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
                 <Route path="/CookiePolicy" element={<CookiePolicy />} />

@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 /* Images */
 import retail from "../pictures/retail.jpg";
-import hospital from "../pictures/image.png";
+import hospital from "../pictures/image2.jpg";
 import startups from "../pictures/starup.png";
 import clinic from "../pictures/clinic.jpg";
 import education from "../pictures/Education.jpg";
@@ -69,12 +69,23 @@ export default function Industries() {
   return (
     <section ref={containerRef} className="relative py-24 bg-[#f8faff] overflow-hidden">
       
-      {/* Background Decor */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="bg-shape-float absolute top-20 left-10 w-64 h-64 bg-blue-600/10 rounded-full blur-[100px]" />
-        <div className="bg-shape-float absolute bottom-20 right-10 w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px]" />
-        <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'linear-gradient(90deg, #2563eb 1px, transparent 1px), linear-gradient(#2563eb 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
-      </div>
+      {/* Background Decor — Engineered Symmetrically for Mobile & Desktop viewports */}
+<div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
+  {/* Left Top Float Shape — Smoothly responsive scale for small touch screens */}
+  <div className="bg-shape-float absolute top-10 md:top-20 left-[-40px] md:left-10 w-44 h-44 md:w-64 md:h-64 bg-blue-600/10 rounded-full blur-[60px] md:blur-[100px]" />
+  
+  {/* Right Bottom Float Shape — Balanced sizing boundaries */}
+  <div className="bg-shape-float absolute bottom-10 md:bottom-20 right-[-60px] md:right-10 w-64 h-64 md:w-96 md:h-96 bg-indigo-600/10 rounded-full blur-[80px] md:blur-[120px]" />
+  
+  {/* Precision Structural Grid Layer Matrix — Scaled micro-steps via responsive media block rules */}
+  <div 
+    className="absolute inset-0 opacity-[0.04] md:opacity-[0.05] transition-all duration-300" 
+    style={{ 
+      backgroundImage: 'linear-gradient(90deg, #2563eb 1px, transparent 1px), linear-gradient(#2563eb 1px, transparent 1px)', 
+      backgroundSize: window.innerWidth < 768 ? '40px 40px' : '60px 60px' // Clean layout grid sizing fallback matching viewport width limits
+    }} 
+  />
+</div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
@@ -122,7 +133,7 @@ export default function Industries() {
                 <div className={`img-box-${i} relative group`}>
                   <div className="absolute -top-8 -right-8 w-40 h-40 border-t-[14px] border-r-[14px] border-blue-900/50 rounded-tr-[5rem] group-hover:-translate-y-2 group-hover:translate-x-2 transition-transform duration-500" />
                   <div className="relative overflow-hidden rounded-[3.5rem] shadow-3xl border-[10px] border-white h-[450px]">
-                    <img src={item.image} alt={item.title} className="parallax-img w-full h-[120%] object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-1000" />
+                    <img src={item.image} alt={item.title} className="parallax-img w-full h-[120%] object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-1000 w-full h-auto object-contain md:object-cover" />
                     <div className="absolute bottom-8 right-8 z-20 bg-slate-900 px-6 py-2.5 rounded-2xl">
                        <p className="text-[10px] font-black text-white uppercase tracking-widest">{item.tag}</p>
                     </div>
