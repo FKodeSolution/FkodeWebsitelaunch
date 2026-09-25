@@ -151,10 +151,10 @@ const CareersPage = () => {
 
             </div>
             <div className="mt-12 flex flex-col items-center gap-2">
-               <a href="mailto:careers@fkodesolution.com" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
-                  <Mail size={18} className="text-blue-500"/> careers@fkodesolution.com
+               <a href="mailto:fkode.careers@gmail.com" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
+                  <Mail size={18} className="text-blue-500"/> fkode.careers@gmail.com
                </a>
-               <p className="text-[10px] uppercase tracking-[0.4em] text-gray-600 mt-4 font-bold">Arumbakkam, Chennai</p>
+               <p className="text-[10px] uppercase tracking-[0.4em] text-gray-600 mt-4 font-bold">Korattur Chennai</p>
             </div>
           </div>
         </section>
