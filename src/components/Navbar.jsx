@@ -98,7 +98,7 @@ export default function Navbar() {
                         <h3 className="text-sm font-black uppercase tracking-[0.3em] text-slate-400">Core Services</h3>
                       </div>
                       <div className="space-y-2">
-                        {["Digital Product Engineering", "Growth & Customer Acquisition", "Intelligent Automation Systems","Startup & Business Launch Solutions"].map((id) => (
+                        {["Digital Product Engineering", "Growth & Customer Acquisition", "Intelligent Automation Systems","Startup & Business Launch"].map((id) => (
                           <button
                             key={id}
                             onClick={() => goToService(id)}
