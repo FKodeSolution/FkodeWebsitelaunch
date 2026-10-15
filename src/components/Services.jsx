@@ -48,7 +48,7 @@ const coreServices = [
   },
   {
     id:"Startup & Business Launch Solutions",
-    title: "Startup & Business Launch",
+    title: "Startup & Business Launch Solutions",
     h4: "Startup / Business Building",
 
     tag: "Idea To Business",
