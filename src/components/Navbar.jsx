@@ -104,7 +104,6 @@ export default function Navbar() {
     <div className="space-y-2">
       {[
         "Digital Product Engineering",
-        "Growth & Customer Acquisition",
         "Intelligent Automation Systems",
         "Startup & Business Launch Solutions",
       ].map((id) => (
