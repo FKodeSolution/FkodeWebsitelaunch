@@ -167,7 +167,7 @@ const serviceDetailsData = {
   /* =====================================================
         4. STARTUP & BUSINESS LAUNCH SOLUTIONS
     ===================================================== */
-    "Startup & Business Launch": {
+    "Startup & Business Launch Solutions": {
       metaTitle: "Startup & Business Launch Solutions | Complete Incubation Support",
       metaDescription: "From raw concept and corporate registration to branding identity assets, MVP software build, and growth frameworks.",
       image: startupImg,
