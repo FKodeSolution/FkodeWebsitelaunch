@@ -45,7 +45,19 @@ const coreServices = [
     image: automationImg,
     icon: <FiZap />,
     items: ["AI Chatbots", "WhatsApp Automation", "Workflow Automation", "Customer Support Systems", "Lead Management", "BI Dashboards"]
-  }
+  },
+  {
+    id:"Startup & Business Launch Solutions",
+    title: "Startup & Business Launch",
+    h4: "Startup / Business Building",
+
+    tag: "Idea To Business",
+    desc: "Have a business or app idea but don't know where to start? We help entrepreneurs transform ideas into successful businesses.",
+    image: registrationImg,
+    icon: <FiZap />,
+    items: ["Business Strategy & Planning", "Company Registration Support", "Brand Identity & Logo Design", "Product Roadmapping", "MVP Development", "SaaS Launch Support"]
+  },
+
 ];
 
 const launchSolutions = [
