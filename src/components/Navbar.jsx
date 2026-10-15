@@ -90,30 +90,48 @@ export default function Navbar() {
                 >
                   <div className="absolute -top-[20px] left-0 w-full h-[20px] bg-transparent" />
                   
-                  <div className="max-w-7xl mx-auto grid grid-cols-12 p-12 gap-0">
-                    {/* CORE SERVICES */}
-                    <div className="col-span-6 border-r border-slate-100 pr-12">
-                      <div className="flex items-center gap-3 mb-8">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                        <h3 className="text-sm font-black uppercase tracking-[0.3em] text-slate-400">Core Services</h3>
-                      </div>
-                      <div className="space-y-2">
-                        {["Digital Product Engineering", "Growth & Customer Acquisition", "Intelligent Automation Systems","Startup & Business Launch Solutions"].map((id) => (
-                          <button
-                            key={id}
-                            onClick={() => goToService(id)}
-                            className="group/item w-full flex items-center justify-between py-4 px-6 border border-transparent hover:border-blue-100 hover:bg-blue-50/40 transition-all text-left rounded-sm"
-                          >
-                            <div className="flex flex-col">
-                              <span className="font-bold uppercase tracking-widest text-[12px] text-slate-800 group-hover/item:text-blue-600">
-                                {id.replace(/-/g, ' ')}
-                              </span>
-                            </div>
-                            <FiArrowRight className="text-blue-600 opacity-0 group-hover/item:opacity-100 -translate-x-2 group-hover/item:translate-x-0 transition-all" />
-                          </button>
-                        ))}
-                      </div>
-                    </div>
+                 
+<div className="max-w-7xl mx-auto grid grid-cols-12 p-12 gap-0">
+  {/* CORE SERVICES */}
+  <div className="col-span-6 border-r border-slate-100 pr-12">
+    <div className="flex items-center gap-3 mb-8">
+      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+      <h3 className="text-sm font-black uppercase tracking-[0.3em] text-slate-400">
+        Core Services
+      </h3>
+    </div>
+
+    <div className="space-y-2">
+      {[
+        "Digital Product Engineering",
+        "Growth & Customer Acquisition",
+        "Intelligent Automation Systems",
+        "Startup & Business Launch Solutions",
+      ].map((id) => (
+        <button
+          key={id}
+          onClick={() => {
+            if (id === "Startup & Business Launch Solutions") {
+              navigate("/servicesStartup");
+            } else {
+              goToService(id);
+            }
+          }}
+          className="group/item w-full flex items-center justify-between py-4 px-6 border border-transparent hover:border-blue-100 hover:bg-blue-50/40 transition-all text-left rounded-sm"
+        >
+          <div className="flex flex-col">
+            <span className="font-bold uppercase tracking-widest text-[12px] text-slate-800 group-hover/item:text-blue-600">
+              {id.replace(/-/g, " ")}
+            </span>
+          </div>
+
+          <FiArrowRight className="text-blue-600 opacity-0 group-hover/item:opacity-100 -translate-x-2 group-hover/item:translate-x-0 transition-all" />
+        </button>
+      ))}
+    </div>
+  </div>
+</div>
+
 
                     {/* EXTENDED SERVICES */}
                     <div className="col-span-6 pl-12">
