@@ -55,7 +55,7 @@ export default function FKodeCorporateHero() {
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-slate-900 leading-[1.1] mb-6">
             Build Your Business. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">
-              Scale Without Stress.
+              Scale Without Stress.dghjkjhgdghj
             </span>
           </h1>
           
