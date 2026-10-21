@@ -73,7 +73,7 @@ export default function FKodeCorporateHero() {
             <div className="flex gap-6">
               <Link to="/contact">
                 <button className="px-10 py-4 bg-blue-600 text-white rounded-full">
-                  Start Project
+                  Start Project sssssssss
                 </button>
               </Link>
               <Link to="/services">
