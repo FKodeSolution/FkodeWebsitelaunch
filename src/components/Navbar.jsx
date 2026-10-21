@@ -10,7 +10,7 @@ import {
 } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import serviceDetailsData from "../data/serviceDetailsData"; 
-import { serviceDetails } from "./Services"; // Importing the data file for dynamic menu generation
+import { serviceDetails } from "./Services";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
