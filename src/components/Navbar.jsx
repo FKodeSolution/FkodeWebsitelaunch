@@ -304,7 +304,7 @@ export default function Navbar() {
         <div className="pt-8">
           <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-slate-400 leading-relaxed">
             © 2026 FKode Solution <br/>
-            Arumbakkam, Chennai.
+            Arumbakkam,cvgbhngvbhn Chennai.
           </p>
         </div>
       </div>
