@@ -50,7 +50,7 @@ export default function ServiceDetails() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6">
-        
+    
         {/* HERO SECTION */}
         <AnimatePresence mode="wait">
           <motion.div
