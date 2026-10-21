@@ -119,7 +119,7 @@ export default function Contact() {
           <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-slate-950 leading-[1.05] sm:leading-[0.95] tracking-tighter uppercase">
             LET'S SCALE <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-400 italic">
-              YOUR VISION.
+              YOUR VISION.asdghjkldghjk
             </span>
           </h2>
         </div>
