@@ -3,7 +3,6 @@ import ScrollReveal from "./ScrollReveal";
 import { motion } from "framer-motion";
 import { FiArrowUpRight, FiCpu, FiTarget, FiZap, FiRocket } from "react-icons/fi";
 import { FaRocket } from "react-icons/fa";
-
 /* Images */
 import softwareImg from "../pictures/software.jpg";
 import digitalImg from "../pictures/digital.jpg";
