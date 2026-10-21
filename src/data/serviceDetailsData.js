@@ -7,7 +7,6 @@ import brandingImg from "../pictures/branding.jpg";      // Added missing refere
 import soft from "../pictures/software.jpg";            // Added missing reference import
 import giftImg from "../pictures/gift.jpg";   
 import ai from "../pictures/Ai.jpg"       // Added missing reference import
-
 const serviceDetailsData = {
 
   /* =====================================================
