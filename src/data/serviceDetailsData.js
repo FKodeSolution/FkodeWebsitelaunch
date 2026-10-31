@@ -211,7 +211,7 @@ const serviceDetailsData = {
       ],
       ctaText: "Book a Discovery Call",
       ctaLink: "/contact"
-    }
+    
   },
 
   
