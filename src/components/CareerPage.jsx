@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 const CareersPage = () => {
   const navigate = useNavigate(); // Hook-ai inga call pannaum
-
+  
   const fullTimeRoles = [
     "Web Developers (Frontend / Backend)",
     "Mobile App Developers",
