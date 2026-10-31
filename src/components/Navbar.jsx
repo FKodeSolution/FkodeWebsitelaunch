@@ -92,6 +92,7 @@ export default function Navbar() {
                   
                  
 <div className="max-w-7xl mx-auto grid grid-cols-12 p-12 gap-0">
+
   {/* CORE SERVICES */}
   <div className="col-span-6 border-r border-slate-100 pr-12">
     <div className="flex items-center gap-3 mb-8">
@@ -104,8 +105,7 @@ export default function Navbar() {
     <div className="space-y-2">
       {[
         "Digital Product Engineering",
-          "Growth & Customer Acquisition",
-
+        "Growth & Customer Acquisition",
         "Intelligent Automation Systems",
         "Startup & Business Launch Solutions",
       ].map((id) => (
@@ -131,34 +131,42 @@ export default function Navbar() {
       ))}
     </div>
   </div>
+
+  {/* EXTENDED SERVICES */}
+  <div className="col-span-6 pl-12">
+    <div className="flex items-center gap-3 mb-8">
+      <div className="w-2 h-2 bg-slate-300 rounded-full"></div>
+      <h3 className="text-sm font-black uppercase tracking-[0.3em] text-slate-400">
+        Extended Services
+      </h3>
+    </div>
+
+    <div className="space-y-2">
+      {["registration", "branding", "gifting"].map((id) => (
+        <button
+          key={id}
+          onClick={() => goToService(id)}
+          className="group/item w-full flex items-center justify-between py-4 px-6 border border-transparent hover:border-slate-200 hover:bg-slate-50 transition-all text-left rounded-sm"
+        >
+          <div className="flex flex-col">
+            <span className="font-bold uppercase tracking-widest text-[12px] text-slate-800 group-hover/item:text-slate-950">
+              {id.replace(/-/g, " ")}
+            </span>
+          </div>
+
+          <FiExternalLink className="text-slate-300 group-hover/item:text-blue-600 transition-colors" />
+        </button>
+      ))}
+    </div>
+  </div>
+
 </div>
 
-
-                    {/* EXTENDED SERVICES */}
-                    <div className="col-span-6 pl-12">
-                      <div className="flex items-center gap-3 mb-8">
-                        <div className="w-2 h-2 bg-slate-300 rounded-full"></div>
-                        <h3 className="text-sm font-black uppercase tracking-[0.3em] text-slate-400">Extended Services</h3>
-                      </div>
-                      <div className="space-y-2">
-                        {[  "registration","branding","gifting"].map((id) => (
-                          <button
-                            key={id}
-                            onClick={() => goToService(id)}
-                            className="group/item w-full flex items-center justify-between py-4 px-6 border border-transparent hover:border-slate-200 hover:bg-slate-50 transition-all text-left rounded-sm"
-                          >
-                            <div className="flex flex-col">
-                              <span className="font-bold uppercase tracking-widest text-[12px] text-slate-800 group-hover/item:text-slate-950">
-                                {id.replace(/-/g, ' ')}
-                              </span>
-                            </div>
-                            <FiExternalLink className="text-slate-300 group-hover/item:text-blue-600 transition-colors" />
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="bg-slate-50 p-4 border-t border-slate-100 text-center">
+<div className="bg-slate-50 p-4 border-t border-slate-100 text-center">
+  <p className="text-[9px] font-mono uppercase tracking-[0.5em] text-slate-400">
+    FKode Systems // Unified Business Infrastructure
+  </p>
+</div>                  <div className="bg-slate-50 p-4 border-t border-slate-100 text-center">
                     <p className="text-[9px] font-mono uppercase tracking-[0.5em] text-slate-400">FKode Systems // Unified Business Infrastructure</p>
                   </div>
                 </motion.div>
